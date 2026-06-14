@@ -645,13 +645,13 @@ body{
   font-size:16px;color:var(--text-light);
 }
 
-/* Heart Palette */
 .palette{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-  justify-content:center;
-  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:35px;
+  justify-items:center;
+  margin-top:30px;
+  padding:10px 20px;
 }
 
 .heart-swatch{
@@ -678,10 +678,19 @@ body{
 }
 
 .heart-swatch::after{
-  left:25px;
   top:0;
+  left:25px;
 }
-@media(max-width:400px){.swatch{flex:0 0 calc(33% - 6px)}}
+
+/* Tablet and Desktop */
+@media (min-width:768px){
+  .palette{
+    grid-template-columns:repeat(5, 1fr);
+    gap:40px;
+    max-width:600px;
+    margin:30px auto 0;
+  }
+}
 
 /* ══════════════════════════════════════
    GIFT

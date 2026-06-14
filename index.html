@@ -644,17 +644,42 @@ body{
   font-family:'Cormorant Garamond',serif;font-style:italic;
   font-size:16px;color:var(--text-light);
 }
-/* Color palette swatches */
-.palette{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.swatch{
-  flex:0 0 calc(25% - 6px);
-  aspect-ratio:1;border-radius:10px;
-  display:flex;align-items:flex-end;justify-content:center;
-  padding:6px 4px;
-  font-family:'Jost',sans-serif;font-size:9px;letter-spacing:1px;
-  text-transform:uppercase;color:rgba(0,0,0,.45);
-  font-weight:500;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+/* Heart Palette */
+.palette{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.heart-swatch{
+  width:50px;
+  height:50px;
+  position:relative;
+  transform:rotate(-45deg);
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.heart-swatch::before,
+.heart-swatch::after{
+  content:'';
+  width:50px;
+  height:50px;
+  position:absolute;
+  border-radius:50%;
+  background:inherit;
+}
+
+.heart-swatch::before{
+  top:-25px;
+  left:0;
+}
+
+.heart-swatch::after{
+  left:25px;
+  top:0;
 }
 @media(max-width:400px){.swatch{flex:0 0 calc(33% - 6px)}}
 
@@ -1033,7 +1058,12 @@ footer{
       <div class="attire-card reveal">
         <h3 class="attire-card-title">For God Parents</h3>
         <p class="attire-note">You hold a sacred role in Kali Heart's life — please dress in white to symbolize this honored blessing.</p>
-        <div class="white-swatch">White</div>
+        <div style="display:flex;justify-content:center;margin:20px 0;">
+        <div class="heart-swatch"
+       style="background:linear-gradient(135deg,#FFFFFF,#F5F0E8);
+              border:2px solid rgba(201,168,76,.25);">
+        </div>
+        </div>
         <div class="attire-reminder">
           <strong>⏰ Special Reminder:</strong><br>
           God Parents are kindly requested to arrive at the church at least <strong>25 minutes before</strong> the ceremony begins.
@@ -1044,15 +1074,15 @@ footer{
         <h3 class="attire-card-title">For Guests</h3>
         <p class="attire-note">Dress code is <em>Casual Attire</em>. We invite you to wear any of these beautiful pastel shades to match the day's whimsical butterfly garden theme.</p>
         <div class="palette">
-          <div class="swatch" style="background:#AED6F1">Pastel Blue</div>
-          <div class="swatch" style="background:#F4C2C2">Blush Pink</div>
-          <div class="swatch" style="background:#C9B8E8">Lavender</div>
-          <div class="swatch" style="background:#FFF0A3">Butter Yellow</div>
-          <div class="swatch" style="background:#FFCBA4">Peach</div>
-          <div class="swatch" style="background:#B5E5D0">Mint Green</div>
-          <div class="swatch" style="background:#C9B0D8">Soft Lilac</div>
-          <div class="swatch" style="background:#FFB6A3">Light Coral</div>
-          <div class="swatch" style="background:#BDD9F0">Powder Blue</div>
+          <div class="heart-swatch" style="background:#AED6F1"></div>
+          <div class="heart-swatch" style="background:#F4C2C2"></div>
+          <div class="heart-swatch" style="background:#C9B8E8"></div>
+          <div class="heart-swatch" style="background:#FFF0A3"></div>
+          <div class="heart-swatch" style="background:#FFCBA4"></div>
+          <div class="heart-swatch" style="background:#B5E5D0"></div>
+          <div class="heart-swatch" style="background:#C9B0D8"></div>
+          <div class="heart-swatch" style="background:#FFB6A3"></div>
+          <div class="heart-swatch" style="background:#BDD9F0"></div>
         </div>
       </div>
     </div>

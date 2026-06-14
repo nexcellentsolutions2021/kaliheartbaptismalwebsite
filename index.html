@@ -892,30 +892,47 @@ footer{
         <!-- Wax seal -->
        <div class="wax-seal" id="waxSeal">
   <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="35" cy="35" r="32" fill="url(#sealGrad)" />
-    <circle cx="35" cy="35" r="28"
-            stroke="rgba(255,255,255,.4)"
-            stroke-width="1"
-            fill="none"/>
-
-    <!-- Centered Heart -->
-    <path
-      d="M35 46
-         C25 38 21 31 21 24
-         C21 18 25 14 30 14
-         C33 14 35 16 35 19
-         C35 16 37 14 40 14
-         C45 14 49 18 49 24
-         C49 31 45 38 35 46Z"
-      fill="rgba(255,255,255,.85)"
-    />
 
     <defs>
-      <radialGradient id="sealGrad" cx="40%" cy="40%">
-        <stop offset="0%" stop-color="#D4A5C9"/>
-        <stop offset="100%" stop-color="#9B72CF"/>
+      <radialGradient id="sealGrad" cx="35%" cy="30%">
+        <stop offset="0%" stop-color="#E6B8D9"/>
+        <stop offset="100%" stop-color="#C78BBE"/>
       </radialGradient>
+
+      <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFF4D0"/>
+        <stop offset="100%" stop-color="#DDBA6C"/>
+      </linearGradient>
     </defs>
+
+    <!-- Wax -->
+    <circle cx="35" cy="35" r="32" fill="url(#sealGrad)" />
+
+    <!-- Gold Ring -->
+    <circle
+      cx="35"
+      cy="35"
+      r="24"
+      fill="none"
+      stroke="url(#ringGrad)"
+      stroke-width="1.8"
+      opacity=".9"
+    />
+
+    <!-- Heart -->
+    <path
+      d="M35 48
+         C25 40 22 34 22 28
+         C22 22 26 18 31 18
+         C34 18 35 20 35 23
+         C35 20 36 18 39 18
+         C44 18 48 22 48 28
+         C48 34 45 40 35 48Z"
+      fill="#FFF8F0"
+      stroke="#F4E8D5"
+      stroke-width="1"
+    />
+
   </svg>
 </div>
         <!-- Envelope flap -->

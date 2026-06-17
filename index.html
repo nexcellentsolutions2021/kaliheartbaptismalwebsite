@@ -61,7 +61,7 @@ body{
 .section-title{
   font-family:'Rouge Script',cursive;
   font-size:clamp(44px,6vw,70px);
-  color:var(--text-blush);
+  color:var(--text-dark);
   line-height:1.2;
   margin-bottom:16px;
 }
@@ -190,7 +190,7 @@ body{
 .env-text{text-align:center;position:relative;z-index:3;padding-top:10px}
 .env-text .invited{font-family:'Rouge Script',cursive;font-size:32px;color:var(--gold);display:block;margin-bottom:6px}
 .env-text .to-celebrate{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:8px}
-.env-text .baby-name{font-family:'Rouge Script',cursive;font-size:48px;color:#E8A0A0;display:block;line-height:1;margin-bottom:8px}
+.env-text .baby-name{font-family:'Rouge Script',cursive;font-size:48px;color:var(--text-dark);display:block;line-height:1;margin-bottom:8px}
 .env-text .env-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-mid);display:block}
 
 .env-corner{position:absolute;width:60px;opacity:.55}
@@ -305,9 +305,9 @@ body{
 .hero-name{
   font-family:'Rouge Script',cursive;
   font-size:clamp(72px,14vw,130px);
-  color:#E8A0A0;
+  color:var(--text-dark);
   line-height:1;margin-bottom:4px;
-  text-shadow:0 4px 40px #E8A0A0;
+  text-shadow:0 4px 40px rgba(232,160,160,.35);
 }
 .hero-event{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,3vw,24px);letter-spacing:4px;text-transform:uppercase;color:var(--text-mid);margin-bottom:32px;font-weight:500}
 .hero-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,3.5vw,28px);color:var(--text-dark);margin-bottom:8px;font-weight:500}
@@ -376,6 +376,11 @@ body{
 .qr-box{display:inline-block;background:var(--white);border:2px solid rgba(168,132,44,.25);border-radius:20px;padding:32px;box-shadow:0 12px 40px rgba(200,180,160,.12)}
 .qr-placeholder{width:160px;height:160px;background:linear-gradient(135deg,var(--lavender-light),var(--blush-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;color:var(--text-light);text-align:center;padding:12px;border:2px dashed rgba(168,132,44,.3);font-weight:500}
 .qr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--text-light)}
+.qr-row{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.qr-row .qr-box{flex:0 0 auto;width:min(200px,42vw)}
+.qr-img{width:160px;height:160px;object-fit:cover;border-radius:12px;display:block;margin:0 auto 12px}
+.qr-label{font-family:'Rouge Script',cursive;font-size:26px;color:var(--text-dark);margin-bottom:4px}
+@media(max-width:480px){.qr-row{gap:16px}.qr-row .qr-box{width:min(160px,44vw)}.qr-img{width:130px;height:130px}}
 
 /* ══ REMINDERS ══ */
 #reminders{background:var(--ivory);position:relative}
@@ -391,7 +396,7 @@ body{
 .rsvp-inner{max-width:680px;margin:0 auto;text-align:center}
 .rsvp-deadline{display:inline-block;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border:1px solid rgba(168,132,44,.25);border-radius:30px;padding:10px 28px;margin:16px 0 32px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--text-mid)}
 .rsvp-deadline strong{color:var(--text-dark)}
-.rsvp-embed-wrap{background:var(--white);border:1px solid rgba(168,132,44,.2);border-radius:20px;padding:12px;box-shadow:0 12px 50px rgba(200,180,160,.12);min-height:200px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--text-light)}
+.rsvp-embed-wrap{background:var(--white);border:1px solid rgba(168,132,44,.2);border-radius:20px;padding:32px;box-shadow:0 12px 50px rgba(200,180,160,.12);min-height:200px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--text-light)}
 
 /* ══ FOOTER ══ */
 footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);padding:80px 24px 48px;text-align:center;position:relative;overflow:hidden}
@@ -457,7 +462,7 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
     <p class="card-together">Together with our family,<br>we invite you to celebrate the Baptism of</p>
     <span class="card-name">Kali Heart</span>
     <div class="card-datetime">December 13, 2026</div>
-    <div class="card-time-txt">3:00 PM</div>
+    <div class="card-time-txt">3:00 in the afternoon</div>
     <div class="divider"><span>✦</span></div>
     <p class="card-welcome">We are grateful to share this blessed occasion with you and your family as we celebrate God's blessings and Kali Heart's special day.</p>
     <p style="font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:8px;opacity:.8;font-weight:600">✨ Opening invitation… ✨</p>
@@ -509,7 +514,7 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
     <h2 class="section-title">A Blessed Celebration</h2>
     <div class="divider"><span>🦋</span></div>
     <blockquote class="welcome-quote">
-      "We are blessed to celebrate this special milestone in Kali Heart's life. Your presence and prayers will make this occasion even more meaningful as we gather with family and friends to witness her Baptism and celebrate God's love and blessings."
+      "By God's grace, we come together to celebrate a beautiful milestone in Kali Heart's life. We warmly invite you to join us in prayer and celebration as she receives the sacrament of Baptism."
     </blockquote>
   </div>
 </section>
@@ -524,7 +529,8 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
     </div>
     <div class="details-grid">
       <div class="detail-card reveal">
-        <div class="venue-placeholder">
+        <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/chruch.jpg" alt="San Vicente Ferrer Parish" class="venue-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="venue-placeholder" style="display:none">
           <svg viewBox="0 0 100 100" fill="none"><path d="M50 10 L90 35 L90 90 L10 90 L10 35 Z" stroke="#A8842C" stroke-width="3" fill="none"/><rect x="40" y="65" width="20" height="25" stroke="#A8842C" stroke-width="2" fill="none"/><path d="M50 5 L50 15" stroke="#A8842C" stroke-width="3"/><circle cx="50" cy="3" r="3" fill="#A8842C"/></svg>
           <span>Church Photo</span>
         </div>
@@ -543,7 +549,7 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
         </div>
         <span class="detail-icon">🥂</span>
         <h3 class="detail-card-title">Reception</h3>
-        <div class="detail-row"><span class="label">Following the Ceremony</span><span class="value">4:30 PM</span></div>
+        <div class="detail-row"><span class="label">Following the Ceremony</span><span class="value">Approximately 4:30 PM</span></div>
         <div class="detail-row"><span class="label">Venue</span><span class="value">Yiyi Chinese Eating House<br>Lazatin Blvd., Brgy. Dolores<br>City of San Fernando, Pampanga</span></div>
         <a href="https://maps.google.com/?q=Yiyi+Chinese+Eating+House+Lazatin+Blvd+San+Fernando+Pampanga" target="_blank" class="maps-btn">📍 Open in Google Maps</a>
       </div>
@@ -622,9 +628,19 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
         Should you wish to bless Kali Heart with a gift, a monetary contribution in lieu of presents would be sincerely appreciated.<br><br>
         Most importantly, your love, prayers, and presence are the greatest gifts we could receive.
       </p>
-      <div class="qr-box">
-        <div class="qr-placeholder">QR Code<br>Coming Soon</div>
-        <p class="qr-note">Scan to send your blessings 🦋</p>
+      <div class="qr-row">
+        <div class="qr-box">
+          <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/maribank.jpg" alt="Maribank QR Code" class="qr-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-placeholder" style="display:none">Maribank QR</div>
+          <p class="qr-label">Maribank</p>
+          <p class="qr-note">Scan to send your blessings 🦋</p>
+        </div>
+        <div class="qr-box">
+          <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/zelle.jpg" alt="Zelle QR Code" class="qr-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-placeholder" style="display:none">Zelle QR</div>
+          <p class="qr-label">Zelle</p>
+          <p class="qr-note">Scan to send your blessings 🦋</p>
+        </div>
       </div>
     </div>
   </div>
@@ -677,7 +693,7 @@ footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);pa
     <p class="footer-name">Kali Heart</p>
     <p class="footer-sub">Baptism Celebration ✦ December 13, 2026</p>
     <div class="divider"><span>🦋</span></div>
-    <p class="footer-quote">"Every butterfly was once a caterpillar, and every blessing begins with faith.<br>Thank you for celebrating this special day with Kali Heart."</p>
+    <p class="footer-quote">"Just as a butterfly unfolds its wings, faith helps us grow into God's beautiful purpose.<br>Thank you for celebrating Kali Heart's Baptism and surrounding her with your love and prayers."</p>
     <p class="footer-copy">Made with love ✦ Kali Heart's Family</p>
   </div>
 </footer>

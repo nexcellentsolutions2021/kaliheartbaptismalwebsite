@@ -3,1734 +3,890 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CJ & LJ — The Wedding | November 21, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<title>Kali Heart's Baptism Celebration — December 13, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --blush: #E8A0A0;
+  --blush-light: #FAE8E8;
+  --baby-blue: #7BB8E0;
+  --baby-blue-light: #DAEEF9;
+  --lavender: #A890D8;
+  --lavender-light: #EAE4F5;
+  --butter: #E8D060;
+  --butter-light: #FFFADB;
+  --peach: #E8A070;
+  --peach-light: #FFE9D8;
+  --mint: #6EC8A8;
+  --mint-light: #DCF5EC;
+  --ivory: #FDFAF5;
+  --gold: #A8842C;
+  --gold-light: #C8B070;
+  --gold-pale: #F7EFDB;
+  --text-dark: #2A1A0E;
+  --text-mid: #4A3020;
+  --text-light: #6A5040;
+  --white: #FFFFFF;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--ivory);
+  color:var(--text-dark);
+  overflow-x:hidden;
+  font-weight:400;
+  line-height:1.7;
+}
+.rouge{font-family:'Rouge Script',cursive}
+.script{font-family:'Great Vibes',cursive}
+.serif{font-family:'Cormorant Garamond',serif}
 
-  :root {
-    --sage: #6B7C5E;
-    --sage-dark: #4a5940;
-    --sage-light: #8a9e7a;
-    --cream: #F5F2EC;
-    --cream-dark: #EDE8DF;
-    --warm-white: #FAFAF7;
-    --charcoal: #2d2d2d;
-    --text-muted: #7a7a6e;
-    --gold: #C9A96E;
-    --gold-light: #e8c98a;
-    --white: #ffffff;
-  }
+/* ── UTILITY ── */
+.section{padding:80px 20px}
+.container{max-width:900px;margin:0 auto}
+.container-wide{max-width:1100px;margin:0 auto}
+.text-center{text-align:center}
+.section-label{
+  font-family:'Jost',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.section-title{
+  font-family:'Rouge Script',cursive;
+  font-size:clamp(44px,6vw,70px);
+  color:var(--text-dark);
+  line-height:1.2;
+  margin-bottom:16px;
+}
+.section-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:clamp(16px,2.5vw,20px);
+  color:var(--text-mid);
+  margin-bottom:40px;
+}
+.divider{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin:24px auto;max-width:300px;
+}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-light))}
+.divider span{color:var(--gold);font-size:18px}
 
-  /* ── SECTION BG IMAGES ── */
-  .has-mobile-bg {
-    position: relative;
-    overflow: hidden;
-  }
-  /* Desktop: photo bg at low opacity, overlay hidden */
-  .has-mobile-bg .mob-bg {
-    display: block;
-    position: absolute; inset: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    opacity: 0.2;
-  }
-  .has-mobile-bg .mob-bg-overlay {
-    position: absolute; inset: 0;
-    z-index: 1;
-    display: none;
-  }
-  /* All content above the bg layers */
-  .has-mobile-bg .container { position: relative; z-index: 2; }
-  .has-mobile-bg > span.section-label,
-  .has-mobile-bg > h2,
-  .has-mobile-bg > div.section-rule,
-  .has-mobile-bg > div.timeline-track,
-  .has-mobile-bg > p.timeline-note { position: relative; z-index: 2; }
-  @media (max-width: 768px) {
-    /* Mobile: show bg image + dark overlay */
-    .has-mobile-bg .mob-bg { display: block; opacity: 1; }
-    .has-mobile-bg .mob-bg-overlay {
-      display: block;
-      background: rgba(8,16,6,0.74);
-    }
-    /* Ensure all section content is above overlay */
-    .has-mobile-bg .container,
-    .has-mobile-bg > span,
-    .has-mobile-bg > h2,
-    .has-mobile-bg > p { position: relative; z-index: 3; }
-    /* Text colors */
-    .has-mobile-bg .section-label { color: rgba(255,255,255,0.6) !important; }
-    .has-mobile-bg .section-title { color: #fff !important; }
-    .has-mobile-bg .section-rule { background: var(--gold-light) !important; opacity: 1 !important; }
-    .has-mobile-bg .note-item { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.88); border-left-color: var(--gold-light); }
-    .has-mobile-bg .note-item strong { color: #fff; }
-    /* Nav */
-    nav { background: rgba(8,16,6,0.88) !important; border-bottom-color: rgba(255,255,255,0.1) !important; }
-    nav .nav-logo { color: var(--gold-light) !important; }
-    nav .nav-toggle span { background: #fff !important; }
-    .mobile-menu { background: rgba(8,16,6,0.97) !important; }
-    .mobile-menu a { color: rgba(255,255,255,0.85) !important; border-bottom-color: rgba(255,255,255,0.1) !important; }
-  }
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
 
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--charcoal); overflow-x: hidden; }
+/* ── FLOATING ELEMENTS LAYER ── */
+.butterfly-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.bf{position:absolute;animation:bfFloat linear infinite}
+.bf svg{animation:bfFlap ease-in-out infinite alternate}
+.fl{position:absolute;animation:flFloat ease-in-out infinite}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(245,242,236,0.95); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(107,124,94,0.15);
-    padding: 0 2rem; height: 64px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .nav-logo { font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 0.18em; color: var(--sage-dark); }
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
-  .nav-links a { font-family: 'Lato', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--sage-dark); transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--sage-dark); transition: all 0.3s; }
-  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(245,242,236,0.98); border-bottom: 1px solid rgba(107,124,94,0.15); flex-direction: column; z-index: 99; max-height: calc(100vh - 64px); overflow-y: auto; }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a { padding: 0.9rem 2rem; font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; color: var(--sage-dark); border-bottom: 1px solid rgba(107,124,94,0.1); }
+@keyframes bfFloat{
+  0%{transform:translate(0,0) rotate(-5deg)}
+  25%{transform:translate(20px,-30px) rotate(5deg)}
+  50%{transform:translate(-10px,-15px) rotate(-3deg)}
+  75%{transform:translate(15px,-40px) rotate(8deg)}
+  100%{transform:translate(0,0) rotate(-5deg)}
+}
+@keyframes bfFlap{
+  0%{transform:scaleX(1)}
+  100%{transform:scaleX(0.3)}
+}
+@keyframes flFloat{
+  0%{transform:translateY(0) rotate(0deg);opacity:.6}
+  33%{transform:translateY(-18px) rotate(8deg);opacity:.9}
+  66%{transform:translateY(-8px) rotate(-5deg);opacity:.7}
+  100%{transform:translateY(0) rotate(0deg);opacity:.6}
+}
+@keyframes sparkle{
+  0%,100%{opacity:0;transform:scale(0)}
+  50%{opacity:1;transform:scale(1)}
+}
+@keyframes floatUp{
+  0%{opacity:0;transform:translateY(20px)}
+  50%{opacity:1}
+  100%{opacity:0;transform:translateY(-60px)}
+}
 
-  /* ── SHARED ── */
-  section { padding: 90px 2rem; position: relative; overflow: hidden; }
-  .section-label { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--sage); display: block; text-align: center; margin-bottom: 0.6rem; }
-  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; text-align: center; color: var(--sage-dark); line-height: 1.15; }
-  .section-rule { width: 50px; height: 1px; background: var(--gold); margin: 1.5rem auto 2.5rem; opacity: 0.7; }
-  .container { max-width: 1000px; margin: 0 auto; position: relative; z-index: 2; }
+/* ══════════════════════════════════════
+   ENVELOPE / INVITATION OVERLAY
+══════════════════════════════════════ */
+#inviteOverlay{
+  position:fixed;inset:0;z-index:9999;
+  background:linear-gradient(135deg,#FDE8EC 0%,#EEE4F5 30%,#E8F4FB 60%,#FFF6E8 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#inviteOverlay.fading{animation:overlayFade .8s ease forwards}
+@keyframes overlayFade{to{opacity:0;pointer-events:none}}
 
-  /* ── TWIG DECORATIONS ── */
-  .twig-deco {
-    position: absolute; pointer-events: none; z-index: 1;
-    opacity: 0.07;
-    pointer-events: none;
-  }
-  .twig-deco.tl { top: -20px; left: -40px; transform: rotate(15deg); width: 320px; }
-  .twig-deco.tr { top: -10px; right: -40px; transform: rotate(-160deg); width: 280px; }
-  .twig-deco.bl { bottom: -20px; left: -30px; transform: rotate(-10deg); width: 300px; }
-  .twig-deco.br { bottom: -10px; right: -30px; transform: rotate(170deg); width: 260px; }
-  .twig-deco.ml { top: 50%; left: -50px; transform: translateY(-50%) rotate(20deg); width: 250px; }
-  .twig-deco.mr { top: 40%; right: -50px; transform: translateY(-50%) rotate(-150deg); width: 250px; }
+.particle{
+  position:absolute;border-radius:50%;
+  animation:floatUp linear infinite;pointer-events:none;
+}
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: var(--sage);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-    padding: 80px 2rem 4rem;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background-image: url('https://ik.imagekit.io/jcsquo5nq/cjandlj/1.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    background-repeat: no-repeat;
-    animation: heroZoom 18s ease-in-out infinite alternate;
-    z-index: 0;
-  }
-  @keyframes heroZoom {
-    from { transform: scale(1); }
-    to   { transform: scale(1.06); }
-  }
-  .hero-overlay {
-    position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(
-      to bottom,
-      rgba(20,30,15,0.55) 0%,
-      rgba(20,30,15,0.45) 40%,
-      rgba(20,30,15,0.62) 80%,
-      rgba(10,18,8,0.75) 100%
-    );
-  }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(201,169,110,0.14) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%); }
-  .hero-twig { position: absolute; pointer-events: none; }
-  .hero-twig.tl { top: -30px; left: -50px; width: 420px; opacity: 0.13; transform: rotate(10deg); }
-  .hero-twig.br { bottom: -30px; right: -50px; width: 400px; opacity: 0.11; transform: rotate(190deg); }
-  .hero-twig.tr { top: 10%; right: 2%; width: 200px; opacity: 0.08; transform: rotate(-80deg); }
-  .hero-twig.bl { bottom: 15%; left: 2%; width: 180px; opacity: 0.08; transform: rotate(100deg); }
+#envelopeWrap{
+  position:relative;display:flex;flex-direction:column;align-items:center;
+  cursor:pointer;z-index:10;
+}
+#envelopeWrap.opening{pointer-events:none}
 
-  .hero-inner { position: relative; z-index: 2; text-align: center; max-width: 700px; animation: fadeUp 1.2s ease both; }
-  .hero-monogram { font-family: 'Playfair Display', serif; font-size: clamp(6rem, 18vw, 13rem); font-weight: 400; line-height: 0.85; color: var(--white); letter-spacing: -0.02em; }
-  .hero-amp { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); font-style: italic; color: var(--gold-light); display: block; margin: 0.1em 0; }
-  .hero-subtitle { font-family: 'Cinzel', serif; font-size: clamp(0.65rem, 2vw, 0.85rem); letter-spacing: 0.45em; color: rgba(255,255,255,0.7); text-transform: uppercase; margin-top: 1.2rem; }
-  .hero-divider { width: 60px; height: 1px; background: var(--gold-light); margin: 1.8rem auto; opacity: 0.7; }
-  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1rem, 3vw, 1.25rem); color: rgba(255,255,255,0.85); font-weight: 300; line-height: 1.8; }
-  .hero-date { margin-top: 2rem; font-family: 'Cinzel', serif; font-size: clamp(0.75rem, 2vw, 0.9rem); letter-spacing: 0.3em; color: var(--gold-light); text-transform: uppercase; }
-  .scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.45); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; animation: bounce 2.2s infinite; }
+.envelope{
+  position:relative;width:min(380px,88vw);
+  filter:drop-shadow(0 20px 60px rgba(180,130,140,.35));
+}
+.env-body{
+  background:linear-gradient(160deg,#FDFAF5 0%,#F9F2E8 100%);
+  border-radius:4px 4px 12px 12px;
+  padding:60px 32px 40px;
+  border:1px solid rgba(201,168,76,.25);
+  position:relative;overflow:hidden;
+}
+.env-body::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(201,168,76,.03) 20px,rgba(201,168,76,.03) 21px);
+}
+.env-flap{
+  position:absolute;top:0;left:0;right:0;
+  height:0;border-left:190px solid transparent;
+  border-right:190px solid transparent;
+  border-top:120px solid #F5ECD8;
+  transform-origin:top center;
+  transition:transform .8s cubic-bezier(.4,0,.2,1);
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.08));
+  z-index:5;
+}
+.env-flap.open{transform:rotateX(180deg)}
+.env-bottom{
+  position:absolute;bottom:0;left:0;right:0;
+  height:0;border-left:190px solid transparent;
+  border-right:190px solid transparent;
+  border-bottom:100px solid #EDE4D0;
+  z-index:1;
+}
+.env-left,.env-right{position:absolute;bottom:0;height:0}
+.env-left{left:0;border-left:190px solid #E8DCC8;border-top:150px solid transparent}
+.env-right{right:0;border-right:190px solid #E8DCC8;border-top:150px solid transparent}
 
-  /* ── COUNTDOWN ── */
-  .countdown-wrap { margin-top: 2.2rem; }
-  .countdown-label { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 1rem; display: block; }
-  .countdown-grid { display: flex; gap: 1rem; justify-content: center; }
-  .cd-unit { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-  .cd-num { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 700; color: var(--white); line-height: 1; min-width: 2ch; text-align: center; }
-  .cd-lbl { font-family: 'Lato', sans-serif; font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-  .cd-sep { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.5rem); color: rgba(255,255,255,0.25); line-height: 1; padding-top: 0.1em; }
+.wax-seal{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:70px;height:70px;z-index:10;transition:all .3s ease;
+}
+.wax-seal.breaking{animation:sealBreak .5s ease forwards}
+@keyframes sealBreak{
+  0%{transform:translate(-50%,-50%) scale(1);opacity:1}
+  50%{transform:translate(-50%,-50%) scale(1.3);opacity:.7}
+  100%{transform:translate(-50%,-50%) scale(0);opacity:0}
+}
 
-  /* ── LOCATION ── */
-  .location-section { background: var(--cream-dark); }
-  .location-section .section-title { color: var(--sage-dark); }
-  .venue-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 860px; margin: 0 auto 3rem; }
-  .venue-card { background: var(--warm-white); border-radius: 4px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
-  .venue-illustration { height: 320px; background: var(--sage); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-  .venue-illustration img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 8s ease; }
-  .venue-card:hover .venue-illustration img { transform: scale(1.05); }
-  .venue-illustration-label { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-family: 'Lato', sans-serif; gap: 10px; }
-  .venue-body { padding: 1.6rem; text-align: center; }
-  .venue-type { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.4rem; display: block; }
-  .venue-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; color: var(--sage-dark); margin-bottom: 0.4rem; }
-  .venue-address { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; font-family: 'Lato', sans-serif; margin-bottom: 1rem; }
-  .map-btn { display: inline-flex; align-items: center; gap: 7px; background: var(--sage); color: white; font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
-  .map-btn:hover { background: var(--sage-dark); transform: translateY(-1px); }
-  .map-btn svg { flex-shrink: 0; }
+.env-text{text-align:center;position:relative;z-index:3;padding-top:10px}
+.env-text .invited{font-family:'Rouge Script',cursive;font-size:32px;color:var(--gold);display:block;margin-bottom:6px}
+.env-text .to-celebrate{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:8px}
+.env-text .baby-name{font-family:'Rouge Script',cursive;font-size:48px;color:#E8A0A0;display:block;line-height:1;margin-bottom:8px}
+.env-text .env-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-mid);display:block}
 
-  .notes-grid { max-width: 780px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .note-item { display: flex; gap: 1rem; background: var(--warm-white); border-left: 3px solid var(--sage); padding: 1rem 1.2rem; border-radius: 0 4px 4px 0; font-size: 0.82rem; color: var(--charcoal); line-height: 1.65; font-family: 'Lato', sans-serif; }
-  .note-item strong { color: var(--sage-dark); }
+.env-corner{position:absolute;width:60px;opacity:.55}
+.env-corner.tl{top:8px;left:8px}
+.env-corner.tr{top:8px;right:8px;transform:rotate(90deg)}
+.env-corner.bl{bottom:8px;left:8px;transform:rotate(270deg)}
+.env-corner.br{bottom:8px;right:8px;transform:rotate(180deg)}
 
-  /* ── TIMELINE ── */
-  .timeline-section { background: var(--sage); padding: 90px 2rem; }
-  .timeline-section .section-label { color: rgba(255,255,255,0.6); }
-  .timeline-section .section-title { color: var(--white); }
-  .timeline-section .section-rule { background: var(--gold-light); }
-  .timeline-track { max-width: 900px; margin: 0 auto; display: flex; align-items: flex-start; position: relative; }
-  .timeline-track::before { content: ''; position: absolute; top: 28px; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.22); }
-  .timeline-item { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; position: relative; }
-  .t-dot { width: 56px; height: 56px; background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; position: relative; z-index: 2; }
-  .t-time { font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--gold-light); }
-  .t-label { font-family: 'Lato', sans-serif; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
-  .timeline-note { text-align: center; margin-top: 2.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 600px; margin-left: auto; margin-right: auto; }
+.tap-hint{
+  margin-top:28px;font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:17px;color:var(--text-mid);
+  animation:pulseHint 2.5s ease-in-out infinite;
+  z-index:10;position:relative;
+}
+@keyframes pulseHint{
+  0%,100%{opacity:.7;transform:scale(1)}
+  50%{opacity:1;transform:scale(1.04)}
+}
+#envelopeWrap:not(.opening) .envelope{animation:envPulse 3s ease-in-out infinite}
+@keyframes envPulse{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-8px) scale(1.01)}
+}
 
-  /* ── ATTIRE ── */
-  .attire-section { background: #5c6b4e; }
-  .attire-section .section-label { color: rgba(255,255,255,0.6); }
-  .attire-section .section-title { color: white; }
-  .attire-section .section-rule { background: var(--gold-light); }
+/* INVITATION CARD */
+@keyframes invitationFloat{
+  0%,100%{transform:translate(-50%,-50%)}
+  50%{transform:translate(-50%,calc(-50% - 10px))}
+}
+#inviteCard{
+  position:absolute;
+  width:min(360px,86vw);
+  background:linear-gradient(160deg,#FDFAF5 0%,#FBF5EE 100%);
+  border:1px solid rgba(201,168,76,.3);
+  border-radius:8px;
+  padding:40px 32px 36px;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(180,140,120,.25);
+  z-index:20;
+  bottom:50%;left:50%;
+  transform:translate(-50%,100%) scale(.92);
+  opacity:0;
+  transition:transform 1.6s cubic-bezier(0.22,1,0.36,1),opacity .8s ease,box-shadow 1.2s ease;
+  will-change:transform;
+}
+#inviteCard.fullReveal{
+  opacity:1;bottom:auto;top:50%;
+  transform:translate(-50%,-50%) scale(1);
+  box-shadow:0 40px 120px rgba(180,140,120,.30),0 15px 40px rgba(0,0,0,.08);
+  transition:all 1s cubic-bezier(0.22,1,0.36,1);
+  animation:invitationFloat 4s ease-in-out infinite;
+}
+.card-eyebrow{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.card-joy{font-family:'Rouge Script',cursive;font-size:40px;color:var(--text-dark);line-height:1.2;margin-bottom:12px}
+.card-together{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--text-mid);margin-bottom:14px;line-height:1.7}
+.card-name{font-family:'Rouge Script',cursive;font-size:58px;color:var(--blush);display:block;margin-bottom:8px;text-shadow:0 2px 20px rgba(232,160,160,.4)}
+.card-datetime{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text-mid);margin-bottom:6px}
+.card-time-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--text-light);margin-bottom:18px}
+.card-welcome{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--text-light);border-top:1px solid var(--gold-pale);padding-top:16px;margin-bottom:24px;line-height:1.8}
+.skip-btn{
+  position:fixed;bottom:28px;right:24px;
+  background:rgba(255,255,255,.7);backdrop-filter:blur(8px);
+  border:1px solid rgba(168,132,44,.3);
+  color:var(--text-light);
+  font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;
+  padding:10px 20px;border-radius:30px;cursor:pointer;z-index:10000;
+  transition:all .2s;
+}
+.skip-btn:hover{color:var(--text-dark);border-color:var(--gold)}
 
-  /* Figure Row — full width, single row, no wrap, scales on all screens */
-  .attire-figures-row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: nowrap;
-    width: 100%;
-    max-width: 920px;
-    margin: 0 auto 1.8rem;
-    gap: 0;
-  }
-  .attire-figure {
-    flex: 1 1 0;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2px;
-  }
-  /* SVG peg-doll scales via viewBox + width:100% */
-  .fig-peg {
-    width: 100%;
-    max-width: 88px;
-    display: block;
-    margin-bottom: 10px;
-  }
-  .fig-label {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(0.36rem, 1.1vw, 0.52rem);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.8);
-    text-align: center;
-    line-height: 1.45;
-    margin-bottom: 3px;
-  }
-  .fig-color {
-    font-family: 'Lato', sans-serif;
-    font-size: clamp(0.33rem, 0.85vw, 0.46rem);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    text-align: center;
-  }
-  .fig-star { font-weight: 700; color: white; }
+/* ══ NAVIGATION ══ */
+#mainNav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0 24px;
+  background:rgba(253,250,245,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(168,132,44,.15);
+  display:none;justify-content:space-between;align-items:center;
+  height:64px;transform:translateY(-100%);transition:transform .5s ease;
+}
+#mainNav.visible{display:flex}
+#mainNav.slide-in{transform:translateY(0)}
+.nav-brand{font-family:'Rouge Script',cursive;font-size:30px;color:#E8A0A0;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-mid);text-decoration:none;transition:color .2s;font-weight:500}
+.nav-links a:hover{color:var(--gold)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--text-mid);margin:5px 0;transition:.3s}
+@media(max-width:680px){
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(253,250,245,.97);flex-direction:column;align-items:center;padding:24px 0;gap:20px;border-bottom:1px solid rgba(168,132,44,.15);transform:translateY(-120%);transition:transform .4s ease;z-index:999}
+  .nav-links.open{transform:translateY(0)}
+  .hamburger{display:block}
+}
 
-  /* Color bar */
-  .attire-colorbar {
-    height: 5px;
-    max-width: 920px;
-    margin: 0 auto 2.5rem;
-    display: flex;
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .attire-colorbar span { flex: 1; }
+/* ══ HERO ══ */
+#hero{
+  min-height:100vh;
+  background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 35%,#E8F4FB 65%,#FFF9EC 100%);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:100px 24px 60px;text-align:center;
+}
+.hero-watercolor{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 20%,rgba(232,160,160,.3) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 35% at 90% 80%,rgba(168,144,216,.3) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 50% at 60% 10%,rgba(123,184,224,.25) 0%,transparent 60%),
+    radial-gradient(ellipse 45% 35% at 30% 85%,rgba(110,200,168,.25) 0%,transparent 60%);
+}
+.hero-content{position:relative;z-index:2}
+.hero-eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;font-weight:600}
+.hero-name{
+  font-family:'Rouge Script',cursive;
+  font-size:clamp(72px,14vw,130px);
+  color:#E8A0A0;
+  line-height:1;margin-bottom:4px;
+  text-shadow:0 4px 40px rgba(232,160,160,.35);
+}
+.hero-event{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,3vw,24px);letter-spacing:4px;text-transform:uppercase;color:var(--text-mid);margin-bottom:32px;font-weight:500}
+.hero-date{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,3.5vw,28px);color:var(--text-dark);margin-bottom:8px;font-weight:500}
+.hero-time{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,2vw,18px);color:var(--text-mid);margin-bottom:48px;letter-spacing:2px;font-weight:400}
 
-  /* Quote */
-  .attire-note {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: rgba(255,255,255,0.7);
-    font-size: 1rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    border-left: 3px solid rgba(255,255,255,0.2);
-    padding-left: 1.2rem;
-  }
+.countdown{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:nowrap;width:100%;overflow-x:auto;padding:0 10px}
+.cd-unit{background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border:1px solid rgba(168,132,44,.2);border-radius:12px;padding:12px 10px;min-width:70px;flex:1;max-width:90px;text-align:center}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,6vw,40px);font-weight:500;color:var(--text-dark);line-height:1;display:block}
+.cd-label{font-family:'Jost',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:4px;display:block;font-weight:600}
+@media(max-width:480px){.countdown{gap:6px}.cd-unit{min-width:65px;padding:10px 6px}.cd-label{font-size:7px;letter-spacing:1px}}
 
-  /* 3-column breakdown */
-  .attire-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    max-width: 920px;
-    margin: 0 auto 2rem;
-  }
-  .attire-col-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    padding-bottom: 0.8rem;
-    margin-bottom: 1.2rem;
-  }
-  .attire-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 1.2rem; }
-  .attire-dots { display: flex; gap: 4px; flex-shrink: 0; margin-top: 4px; }
-  .adot { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
-  .attire-item-role {
-    font-family: 'Cinzel', serif;
-    font-size: 0.52rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    display: block;
-    margin-bottom: 2px;
-  }
-  .attire-item-color {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: white;
-    line-height: 1.2;
-  }
-  .attire-item-sub {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.4);
-    margin-top: 2px;
-  }
+/* ══ WELCOME ══ */
+#welcome{background:linear-gradient(135deg,#FBF6FF 0%,#FFF6F6 50%,#F6FBF4 100%);position:relative;overflow:hidden}
+.welcome-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.welcome-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(18px,3vw,24px);color:var(--text-mid);line-height:1.9;border-left:3px solid var(--blush);padding-left:28px;text-align:left;margin-top:16px;font-weight:400}
 
-  .attire-bottom-note {
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 4px;
-    padding: 1.2rem 2rem;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1rem;
-    color: rgba(255,255,255,0.65);
-  }
-  .attire-bottom-note strong { font-style: normal; color: white; }
+/* ══ DETAILS ══ */
+#details{background:var(--ivory);position:relative}
+.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+@media(max-width:620px){.details-grid{grid-template-columns:1fr}}
+.detail-card{background:var(--white);border:1px solid rgba(168,132,44,.15);border-radius:20px;padding:40px 32px;text-align:center;box-shadow:0 8px 40px rgba(200,180,160,.1);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.detail-card:hover{transform:translateY(-4px);box-shadow:0 16px 60px rgba(200,180,160,.2)}
+.detail-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blush),var(--lavender),var(--baby-blue))}
+.detail-icon{font-size:40px;margin-bottom:20px;display:block}
+.detail-card-title{font-family:'Rouge Script',cursive;font-size:40px;color:var(--text-dark);margin-bottom:16px}
+.detail-row{margin-bottom:10px}
+.detail-row .label{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:3px;font-weight:600}
+.detail-row .value{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--text-mid);line-height:1.5;font-weight:400}
+.maps-btn{display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:linear-gradient(135deg,var(--baby-blue-light),var(--mint-light));border:1px solid rgba(123,184,224,.5);color:var(--text-mid);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;border-radius:30px;text-decoration:none;transition:all .2s;font-weight:500}
+.maps-btn:hover{background:linear-gradient(135deg,var(--baby-blue),var(--mint));color:var(--text-dark)}
+.venue-placeholder{width:100%;height:140px;background:linear-gradient(135deg,var(--blush-light),var(--lavender-light));border-radius:12px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--text-light);font-size:15px;overflow:hidden;position:relative}
+.venue-placeholder svg{position:absolute;opacity:.12;width:80px}
+.venue-img{width:100%;height:200px;object-fit:contain;background:linear-gradient(135deg,var(--blush-light),var(--lavender-light));border-radius:12px;margin-bottom:20px;display:block}
 
-  /* ── ENTOURAGE ── */
-  .entourage-section { background: var(--cream-dark); position: relative; overflow: hidden; }
+/* ══ TIMELINE ══ */
+#timeline{background:linear-gradient(160deg,#FEF0F5 0%,#F5F0FF 50%,#F0F8FF 100%);position:relative}
+.timeline-wrap{position:relative;max-width:560px;margin:40px auto 0;padding-left:40px}
+.timeline-wrap::before{content:'';position:absolute;left:14px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--blush),var(--lavender),var(--baby-blue),var(--mint))}
+.t-item{position:relative;margin-bottom:36px}
+.t-dot{position:absolute;left:-34px;top:4px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--lavender));border:3px solid var(--white);box-shadow:0 2px 12px rgba(232,160,160,.5)}
+.t-time{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;font-weight:600}
+.t-event{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--text-dark);font-weight:500}
 
-  /* Full photo background on entourage - desktop + mobile */
-  .entourage-photo-bg {
-    position: relative;
-    background: transparent;
-  }
-  .ent-photo-bg {
-    position: absolute; inset: 0; z-index: 0;
-    background-image: url('https://ik.imagekit.io/jcsquo5nq/cjandlj/9.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-attachment: scroll;
-  }
-  .ent-photo-overlay {
-    position: absolute; inset: 0; z-index: 1;
-    background: rgba(8, 16, 6, 0.68);
-  }
-  .entourage-photo-bg > .container { position: relative; z-index: 3; }
-  .entourage-photo-bg > svg.twig-deco { position: absolute; z-index: 2; }
-  /* Entourage section has overflow:hidden from has-mobile-bg but this section 
-     uses its own bg system so remove that constraint */
-  .entourage-photo-bg { overflow: visible; }
+/* ══ ATTIRE ══ */
+#attire{background:var(--ivory);position:relative}
+.attire-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
+@media(max-width:620px){.attire-grid{grid-template-columns:1fr}}
+.attire-card{background:var(--white);border:1px solid rgba(168,132,44,.15);border-radius:20px;padding:36px 28px;box-shadow:0 8px 40px rgba(200,180,160,.08)}
+.attire-card-title{font-family:'Rouge Script',cursive;font-size:38px;color:var(--text-dark);margin-bottom:8px}
+.attire-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--text-mid);margin-bottom:20px;line-height:1.7}
+.attire-reminder{background:var(--butter-light);border:1px solid rgba(232,208,96,.6);border-radius:12px;padding:14px 18px;font-family:'Jost',sans-serif;font-size:13px;color:var(--text-mid);line-height:1.7;margin-top:16px;font-weight:400}
+.attire-reminder strong{color:var(--text-dark)}
+.white-swatch{width:100%;height:64px;border-radius:12px;background:linear-gradient(135deg,#FFFFFF,#F5F0E8);border:2px solid rgba(168,132,44,.25);margin:16px 0 8px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--text-light)}
 
-  /* White text overrides for entourage (desktop + mobile) */
-  .entourage-photo-bg .section-label { color: rgba(255,255,255,0.6) !important; }
-  .entourage-photo-bg .section-title { color: white !important; }
-  .entourage-photo-bg .section-rule { background: var(--gold-light) !important; opacity: 1 !important; }
-  .entourage-photo-bg .entourage-group-title { color: var(--gold-light) !important; }
-  .entourage-photo-bg .entourage-group-title::after { background: var(--gold-light); opacity: 0.5; }
-  .entourage-photo-bg .ent-role-title { color: rgba(255,255,255,0.6) !important; }
-  .entourage-photo-bg .ent-name { color: rgba(255,255,255,0.92) !important; }
+.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;justify-items:center;margin-top:30px;padding:10px 20px}
+.heart-swatch{width:50px;height:50px;position:relative;transform:rotate(-45deg);box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.heart-swatch::before,.heart-swatch::after{content:'';width:50px;height:50px;position:absolute;border-radius:50%;background:inherit}
+.heart-swatch::before{top:-25px;left:0}
+.heart-swatch::after{top:0;left:25px}
+@media(min-width:768px){.palette{grid-template-columns:repeat(5,1fr);gap:40px;max-width:600px;margin:30px auto 0}}
 
+/* ══ GIFT ══ */
+#gift{background:linear-gradient(135deg,#FEF4F8 0%,#F4F0FF 50%,#EEF8F4 100%);position:relative}
+.gift-inner{max-width:640px;margin:0 auto;text-align:center}
+.gift-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2.8vw,21px);color:var(--text-mid);line-height:1.85;margin:24px 0 36px;font-weight:400}
+.qr-box{display:inline-block;background:var(--white);border:2px solid rgba(168,132,44,.25);border-radius:20px;padding:32px;box-shadow:0 12px 40px rgba(200,180,160,.12);text-align:center}
+.qr-placeholder{width:160px;height:160px;background:linear-gradient(135deg,var(--lavender-light),var(--blush-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;color:var(--text-light);text-align:center;padding:12px;border:2px dashed rgba(168,132,44,.3);font-weight:500}
+.qr-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--text-light)}
+.qr-row{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.qr-row .qr-box{flex:0 0 auto;width:min(200px,42vw)}
+.qr-img{width:160px;height:160px;object-fit:cover;border-radius:12px;display:block;margin:0 auto 12px}
+.qr-label{font-family:'Rouge Script',cursive;font-size:26px;color:var(--text-dark);margin-bottom:4px}
+@media(max-width:480px){.qr-row{gap:16px}.qr-row .qr-box{width:min(160px,44vw)}.qr-img{width:130px;height:130px}}
 
-  .entourage-block { max-width: 860px; margin: 0 auto; }
-  .entourage-group { margin-bottom: 3rem; }
-  .entourage-group-title { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--sage); text-align: center; margin-bottom: 1.2rem; }
-  .entourage-group-title::after { content: ''; display: block; width: 30px; height: 1px; background: var(--gold); margin: 0.6rem auto 0; opacity: 0.6; }
+/* ══ REMINDERS ══ */
+#reminders{background:var(--ivory);position:relative}
+.reminders-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:36px}
+.reminder-card{background:linear-gradient(135deg,#FFFAFC,#F8F4FF);border:1px solid rgba(168,132,44,.15);border-radius:16px;padding:24px 20px;text-align:center;box-shadow:0 4px 20px rgba(200,180,160,.08);transition:transform .2s}
+.reminder-card:hover{transform:translateY(-3px)}
+.reminder-icon{font-size:32px;display:block;margin-bottom:12px}
+.reminder-text{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--text-mid);line-height:1.5;font-weight:400}
+.reminders-footer{text-align:center;margin-top:32px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--text-mid)}
 
-  /* 2-column names grid */
-  .ent-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 3rem; max-width: 680px; margin: 0 auto; }
-  /* 1-column centered */
-  .ent-1col { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
-  /* 2-column role boxes */
-  .ent-roles-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 3rem; max-width: 680px; margin: 0 auto; text-align: center; }
-  .ent-role-title { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage); display: block; margin-bottom: 0.5rem; }
-  .ent-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--charcoal); text-align: center; line-height: 1.9; }
+/* ══ RSVP ══ */
+#rsvp{background:linear-gradient(135deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4F8 100%);position:relative}
+.rsvp-inner{max-width:680px;margin:0 auto;text-align:center}
+.rsvp-deadline{display:inline-block;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border:1px solid rgba(168,132,44,.25);border-radius:30px;padding:10px 28px;margin:16px 0 32px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--text-mid)}
+.rsvp-deadline strong{color:var(--text-dark)}
+.rsvp-embed-wrap{background:var(--white);border:1px solid rgba(168,132,44,.2);border-radius:20px;padding:32px;box-shadow:0 12px 50px rgba(200,180,160,.12);min-height:200px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--text-light)}
 
-  /* ── GIFT ── */
-  /* ── GIFT SECTION ── */
-  .gift-section {
-    background: var(--sage);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .gift-inner {
-    position: relative;
-    z-index: 3;
-    padding: 80px 2rem;
-    max-width: 100%;
-  }
-  .gift-section .section-label { color: rgba(255,255,255,0.6); }
-  .gift-section .section-title { color: white; }
-  .gift-section .section-rule { background: var(--gold-light); }
-  .gift-intro {
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(1rem, 3vw, 1.15rem);
-    color: rgba(255,255,255,0.85);
-    max-width: 640px;
-    margin: 0 auto 3rem;
-    line-height: 1.9;
-  }
-  .gift-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  .gift-card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 8px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-  .gift-bank { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 600; }
-  .gift-bank.bdo { color: #0066cc; background: white; display: inline-block; padding: 4px 14px; border-radius: 4px; }
-  .gift-bank.bpi { color: #cc0000; background: white; display: inline-block; padding: 4px 14px; border-radius: 4px; }
-  .gift-purpose { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold-light); margin: 0.8rem 0 0.3rem; }
-  .gift-acct { font-family: 'Lato', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; margin-bottom: 1rem; }
-  .qr-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 4px solid rgba(255,255,255,0.4);
-    display: block;
-    background: #fff;
-  }
-  .qr-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 3px;
-  }
-  .gift-closing { text-align: center; margin-top: 2.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+/* ══ FOOTER ══ */
+footer{background:linear-gradient(160deg,#FDE8EC 0%,#EEE4F5 50%,#E8F4FB 100%);padding:80px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.footer-name{font-family:'Rouge Script',cursive;font-size:clamp(56px,9vw,96px);color:#E8A0A0;line-height:1.1;margin-bottom:6px}
+.footer-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text-mid);margin-bottom:32px;font-weight:400}
+.footer-quote{max-width:540px;margin:0 auto 40px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,2.5vw,19px);color:var(--text-mid);line-height:1.85;border-top:1px solid rgba(168,132,44,.25);border-bottom:1px solid rgba(168,132,44,.25);padding:24px 0;font-weight:400}
+.footer-copy{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:500}
+.wc-corner{position:absolute;width:140px;opacity:.35;pointer-events:none}
+.wc-corner.tl{top:-10px;left:-10px}
+.wc-corner.tr{top:-10px;right:-10px;transform:rotate(90deg)}
+.wc-corner.bl{bottom:-10px;left:-10px;transform:rotate(270deg)}
+.wc-corner.br{bottom:-10px;right:-10px;transform:rotate(180deg)}
 
-  /* Gift — mobile */
-  @media (max-width: 768px) {
-    .gift-inner { padding: 60px 1.2rem; }
-    .gift-cards {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      max-width: 100%;
-    }
-    .gift-card {
-      background: rgba(10,30,10,0.82);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px;
-      padding: 1.2rem 0.8rem;
-    }
-    .qr-img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 1 / 1;
-      max-width: 140px;
-      border: 3px solid rgba(255,255,255,0.7);
-      background: #fff;
-    }
-    .qr-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-    .gift-bank { font-size: 1.1rem; }
-    .gift-purpose { font-size: 1rem; margin: 0.5rem 0 0.2rem; }
-    .gift-acct { font-size: 0.68rem; margin-bottom: 0.7rem; }
-  }
-
-  /* ── VIDEO ── */
-  .video-section { background: var(--charcoal); padding: 90px 2rem; }
-  .video-section .section-label { color: rgba(255,255,255,0.5); }
-  .video-section .section-title { color: white; }
-  .video-section .section-rule { background: var(--gold-light); }
-  .video-wrap {
-    max-width: 860px; margin: 0 auto;
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 8px 50px rgba(0,0,0,0.5);
-  }
-  .video-wrap iframe {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-  .video-caption {
-    text-align: center;
-    margin-top: 1.5rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: rgba(255,255,255,0.5);
-    font-size: 1rem;
-  }
-
-  /* ── UPLOADS ── */
-  .uploads-section { background: var(--cream); }
-  .upload-btn { display: flex; align-items: center; gap: 10px; background: var(--sage); color: white; font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; padding: 1rem 2rem; border-radius: 2px; transition: background 0.25s, transform 0.2s; width: fit-content; margin: 0 auto; }
-  .upload-btn:hover { background: var(--sage-dark); transform: translateY(-2px); }
-  .upload-desc { text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 2rem; line-height: 1.8; }
-
-  /* ── GALLERY ── */
-  .photo-section { background: var(--sage-dark); padding: 70px 2rem; position: relative; overflow: hidden; }
-
-  /* Masonry grid */
-  .gallery-grid {
-    max-width: 980px; margin: 0 auto;
-    columns: 3; column-gap: 10px;
-    position: relative; z-index: 2;
-  }
-  .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 10px;
-    overflow: hidden;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    display: block;
-  }
-  .gallery-item img {
-    width: 100%; height: auto;
-    display: block;
-    transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
-  }
-  .gallery-item:hover img { transform: scale(1.06); }
-  .gallery-item-overlay {
-    position: absolute; inset: 0;
-    background: rgba(10,18,8,0);
-    transition: background 0.3s;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .gallery-item:hover .gallery-item-overlay { background: rgba(10,18,8,0.3); }
-  .gallery-item-overlay svg { opacity: 0; transition: opacity 0.3s; color: white; }
-  .gallery-item:hover .gallery-item-overlay svg { opacity: 1; }
-
-  /* Lightbox */
-  .lightbox {
-    display: none;
-    position: fixed; inset: 0; z-index: 1000;
-    background: rgba(5,10,5,0.95);
-    align-items: center; justify-content: center;
-    backdrop-filter: blur(8px);
-  }
-  .lightbox.open { display: flex; }
-  .lightbox-inner {
-    position: relative;
-    max-width: min(90vw, 1100px);
-    max-height: 90vh;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .lightbox-img {
-    max-width: 100%; max-height: 90vh;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 20px 80px rgba(0,0,0,0.8);
-    user-select: none;
-  }
-  .lb-close {
-    position: fixed; top: 1.2rem; right: 1.5rem;
-    background: none; border: none; color: white; cursor: pointer;
-    font-size: 2rem; line-height: 1; opacity: 0.7;
-    transition: opacity 0.2s, transform 0.2s;
-    z-index: 1001;
-  }
-  .lb-close:hover { opacity: 1; transform: rotate(90deg); }
-  .lb-prev, .lb-next {
-    position: fixed; top: 50%; transform: translateY(-50%);
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-    color: white; cursor: pointer;
-    width: 50px; height: 50px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s; z-index: 1001;
-    font-size: 1.2rem;
-  }
-  .lb-prev { left: 1rem; }
-  .lb-next { right: 1rem; }
-  .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.22); }
-  .lb-counter {
-    position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
-    color: rgba(255,255,255,0.5); font-family: 'Cinzel',serif;
-    font-size: 0.65rem; letter-spacing: 0.3em;
-    z-index: 1001;
-  }
-
-  @media (max-width: 768px) {
-    .gallery-grid { columns: 2; column-gap: 6px; }
-    .gallery-item { margin-bottom: 6px; }
-    .lb-prev { left: 0.4rem; }
-    .lb-next { right: 0.4rem; }
-  }
-  @media (max-width: 480px) {
-    .gallery-grid { columns: 2; }
-  }
-
-  /* ── RSVP ── */
-  .rsvp-section { background: var(--cream-dark); padding: 0; }
-  .rsvp-header { background: var(--sage-dark); padding: 60px 2rem 30px; text-align: center; position: relative; overflow: hidden; }
-  .rsvp-header .section-label { color: rgba(255,255,255,0.6); }
-  .rsvp-header .section-title { color: white; }
-  .rsvp-header .section-rule { background: var(--gold-light); }
-  .rsvp-header p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 1.5rem; position: relative; z-index: 2; }
-  .rsvp-frame-wrap { max-width: 900px; margin: 0 auto; padding: 0 1rem 60px; }
-  .rsvp-frame-wrap iframe { width: 100%; height: 700px; border: none; border-radius: 4px; box-shadow: 0 4px 30px rgba(0,0,0,0.12); display: block; }
-
-  /* ── CLOSING ── */
-  .closing-section {
-    background: var(--sage-dark);
-    padding: 80px 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .closing-section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: url('https://ik.imagekit.io/jcsquo5nq/cjandlj/10.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.22;
-    z-index: 0;
-  }
-  .closing-monogram { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1; margin-bottom: 1.5rem; position: relative; z-index: 1; }
-  .closing-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; color: rgba(255,255,255,0.8); line-height: 1.9; max-width: 540px; margin: 0 auto 1.5rem; position: relative; z-index: 2; }
-  .closing-names { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.35em; color: var(--gold-light); position: relative; z-index: 2; }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--charcoal);
-    padding: 1.5rem 2rem;
-    text-align: center;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.35);
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.05em;
-  }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
-  footer a:hover { color: var(--gold-light); }
-  footer .heart { color: #e88; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-  @keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
-  @keyframes scaleUp { from { opacity: 0; transform: scale(0.93); } to { opacity: 1; transform: scale(1); } }
-  @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
-  @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-
-  /* Base reveal — fade up */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* Variant reveals */
-  .reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
-  .reveal-left.visible { opacity: 1; transform: none; }
-  .reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
-  .reveal-right.visible { opacity: 1; transform: none; }
-  .reveal-scale { opacity: 0; transform: scale(0.94); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
-  .reveal-scale.visible { opacity: 1; transform: scale(1); }
-
-  /* Stagger delays */
-  .d1 { transition-delay: 0.08s; }
-  .d2 { transition-delay: 0.18s; }
-  .d3 { transition-delay: 0.28s; }
-  .d4 { transition-delay: 0.38s; }
-  .d5 { transition-delay: 0.48s; }
-  .d6 { transition-delay: 0.58s; }
-
-  /* Section entrance — subtle background slide */
-  section, .photo-section, .rsvp-section { transition: background 0.4s ease; }
-
-  /* Image hover zoom */
-  .venue-card { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
-  .venue-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.13); }
-
-  /* Gold shimmer on section rules when visible */
-  .section-rule.shimmer-ready { background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%); background-size: 200% auto; animation: shimmer 2.5s linear infinite; opacity: 0.8; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .nav-toggle { display: flex; }
-
-    /* Remove gaps between sections */
-    section, .photo-section, .video-section { padding: 60px 1.2rem; margin: 0; }
-    section + section,
-    section + div,
-    div + section { margin-top: 0; }
-
-    /* Prevent section background colors from showing through on mobile
-       — let the mob-bg image take over */
-    .has-mobile-bg.location-section { background: transparent; }
-    .has-mobile-bg.timeline-section { background: transparent; }
-    .has-mobile-bg.attire-section { background: transparent; }
-    /* gift-section keeps its own bg — do not make transparent */
-    .has-mobile-bg.uploads-section { background: transparent; }
-    .has-mobile-bg.video-section { background: transparent; }
-
-    .venue-cards { grid-template-columns: 1fr; }
-    .notes-grid { grid-template-columns: 1fr; }
-
-    .timeline-track { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
-    .timeline-track::before { top: 0; left: 27px; right: auto; bottom: 0; width: 1px; height: 100%; }
-    .timeline-item { flex-direction: row; gap: 1rem; text-align: left; }
-    .t-dot { flex-shrink: 0; }
-    .t-time, .t-label { text-align: left; }
-
-    /* Attire */
-    .attire-figures-row { max-width: 100%; padding: 0; }
-    .attire-figure { padding: 0 1px; }
-    .attire-cols { grid-template-columns: 1fr; gap: 0; }
-    .attire-col-title { margin-top: 1.5rem; text-align: center; }
-    .attire-note { border: none; padding: 0; text-align: center; }
-    .attire-bottom-note { padding: 1rem; }
-
-    /* Entourage — FORCE 2 columns always */
-    .ent-2col { grid-template-columns: 1fr 1fr !important; gap: 0.1rem 0.6rem; }
-    .ent-roles-2col { grid-template-columns: 1fr 1fr !important; gap: 0.8rem 0.6rem; }
-    .ent-name { font-size: 0.78rem; }
-
-    .rsvp-frame-wrap iframe { height: 900px; }
-
-    .gallery-grid { columns: 2; column-gap: 6px; }
-    .gallery-item { margin-bottom: 6px; }
-  }
-
-  @media (max-width: 400px) {
-    .countdown-grid { gap: 0.4rem; }
-    .cd-sep { display: none; }
-    .cd-num { font-size: 1.8rem; }
-  }
-
+@media(max-width:480px){.section{padding:60px 18px}.detail-card{padding:28px 20px}.attire-card{padding:28px 20px}.qr-box{padding:20px}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">CJ & LJ</div>
-  <ul class="nav-links">
-    <li><a href="#location">Location</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#attire">Attire</a></li>
-    <li><a href="#entourage">Entourage</a></li>
-    <li><a href="#gifts">Gifts</a></li>
-    <li><a href="#photos">Gallery</a></li>
-    <li><a href="#upload">Upload</a></li>
-    <li><a href="#rsvp">RSVP</a></li>
-  </ul>
-  <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+<!-- ══ INVITE OVERLAY ══ -->
+<div id="inviteOverlay">
+  <div id="particles"></div>
+  <div class="butterfly-layer" id="bgBf"></div>
+
+  <div id="envelopeWrap">
+    <div class="envelope" id="envelope">
+      <div class="env-body">
+        <svg class="env-corner tl" viewBox="0 0 80 80" fill="none"><circle cx="20" cy="20" r="8" fill="#E8A0A0" opacity=".7"/><circle cx="35" cy="12" r="5" fill="#A890D8" opacity=".6"/><circle cx="12" cy="36" r="6" fill="#7BB8E0" opacity=".6"/><path d="M15 15 Q30 5 45 20 Q30 35 15 25 Z" fill="#E8A0A0" opacity=".35"/><path d="M8 30 Q20 18 35 28 Q22 38 10 35 Z" fill="#A890D8" opacity=".3"/><circle cx="48" cy="18" r="3" fill="#E8A070" opacity=".5"/><circle cx="18" cy="48" r="3" fill="#6EC8A8" opacity=".5"/></svg>
+        <svg class="env-corner tr" viewBox="0 0 80 80" fill="none"><circle cx="20" cy="20" r="8" fill="#E8A0A0" opacity=".7"/><circle cx="35" cy="12" r="5" fill="#A890D8" opacity=".6"/><circle cx="12" cy="36" r="6" fill="#7BB8E0" opacity=".6"/><path d="M15 15 Q30 5 45 20 Q30 35 15 25 Z" fill="#E8A0A0" opacity=".35"/><path d="M8 30 Q20 18 35 28 Q22 38 10 35 Z" fill="#A890D8" opacity=".3"/></svg>
+        <svg class="env-corner bl" viewBox="0 0 80 80" fill="none"><circle cx="20" cy="20" r="8" fill="#6EC8A8" opacity=".7"/><circle cx="35" cy="12" r="5" fill="#E8D060" opacity=".6"/><circle cx="12" cy="36" r="6" fill="#E8A070" opacity=".6"/><path d="M15 15 Q30 5 45 20 Q30 35 15 25 Z" fill="#6EC8A8" opacity=".35"/></svg>
+        <svg class="env-corner br" viewBox="0 0 80 80" fill="none"><circle cx="20" cy="20" r="8" fill="#6EC8A8" opacity=".7"/><circle cx="35" cy="12" r="5" fill="#E8D060" opacity=".6"/><circle cx="12" cy="36" r="6" fill="#E8A070" opacity=".6"/><path d="M15 15 Q30 5 45 20 Q30 35 15 25 Z" fill="#6EC8A8" opacity=".35"/></svg>
+
+        <div class="wax-seal" id="waxSeal">
+          <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="sealGrad" cx="35%" cy="30%"><stop offset="0%" stop-color="#E6B8D9"/><stop offset="100%" stop-color="#C78BBE"/></radialGradient>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFF4D0"/><stop offset="100%" stop-color="#DDBA6C"/></linearGradient>
+            </defs>
+            <circle cx="35" cy="35" r="32" fill="url(#sealGrad)"/>
+            <circle cx="35" cy="35" r="24" fill="none" stroke="url(#ringGrad)" stroke-width="1.8" opacity=".9"/>
+            <path d="M35 48 C25 40 22 34 22 28 C22 22 26 18 31 18 C34 18 35 20 35 23 C35 20 36 18 39 18 C44 18 48 22 48 28 C48 34 45 40 35 48Z" fill="#FFF8F0" stroke="#F4E8D5" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <div class="env-flap" id="envFlap"></div>
+        <div class="env-left"></div>
+        <div class="env-right"></div>
+        <div class="env-bottom"></div>
+
+        <div class="env-text">
+          <span class="invited">You're Invited</span>
+          <span class="to-celebrate">To Celebrate the Baptism of</span>
+          <span class="baby-name">Kali Heart</span>
+          <span class="env-date">December 13, 2026</span>
+        </div>
+      </div>
+    </div>
+    <p class="tap-hint">✨ Tap the envelope to open your invitation ✨</p>
+  </div>
+
+  <div id="inviteCard">
+    <div class="card-eyebrow">❤ A Sacred Celebration ❤</div>
+    <div class="card-joy">With Joy In Our Hearts</div>
+    <p class="card-together">Together with our family,<br>we invite you to celebrate the Baptism of</p>
+    <span class="card-name">Kali Heart</span>
+    <div class="card-datetime">December 13, 2026</div>
+    <div class="card-time-txt">3:00 in the afternoon</div>
+    <div class="divider"><span>✦</span></div>
+    <p class="card-welcome">We are grateful to share this blessed occasion with you and your family as we celebrate God's blessings and Kali Heart's special day.</p>
+    <p style="font-family:'Jost',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:8px;opacity:.8;font-weight:600">✨ Opening invitation… ✨</p>
+  </div>
+
+  <button class="skip-btn" id="skipBtn">Skip</button>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-brand">Kali Heart</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#details">Ceremony</a></li>
+    <li><a href="#timeline">Schedule</a></li>
+    <li><a href="#attire">Attire</a></li>
+    <li><a href="#gift">Gifts</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+  </ul>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#location" onclick="closeMenu()">Location</a>
-  <a href="#timeline" onclick="closeMenu()">Timeline</a>
-  <a href="#attire" onclick="closeMenu()">Attire</a>
-  <a href="#entourage" onclick="closeMenu()">Entourage</a>
-  <a href="#gifts" onclick="closeMenu()">Gifts</a>
-  <a href="#photos" onclick="closeMenu()">Gallery</a>
-  <a href="#upload" onclick="closeMenu()">Upload</a>
-  <a href="#rsvp" onclick="closeMenu()">RSVP</a>
-</div>
 
-<!-- TWIG SVG DEFINITION (reusable) -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <symbol id="twig" viewBox="0 0 280 380">
-      <!-- main stem -->
-      <path d="M140 360 C138 300 130 240 120 180 C110 120 95 70 100 20" fill="none" stroke="#4a5940" stroke-width="2.5" stroke-linecap="round"/>
-      <!-- left branches -->
-      <path d="M130 300 C110 285 85 278 60 282" fill="none" stroke="#4a5940" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M125 250 C105 232 78 228 50 235" fill="none" stroke="#4a5940" stroke-width="1.6" stroke-linecap="round"/>
-      <path d="M118 200 C98 182 72 178 48 185" fill="none" stroke="#4a5940" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M112 155 C95 138 70 136 48 143" fill="none" stroke="#4a5940" stroke-width="1.4" stroke-linecap="round"/>
-      <path d="M108 110 C93 96 70 94 50 100" fill="none" stroke="#4a5940" stroke-width="1.3" stroke-linecap="round"/>
-      <!-- right branches -->
-      <path d="M128 275 C148 258 174 252 200 255" fill="none" stroke="#4a5940" stroke-width="1.7" stroke-linecap="round"/>
-      <path d="M122 228 C142 210 168 206 195 212" fill="none" stroke="#4a5940" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M116 180 C136 162 162 160 188 165" fill="none" stroke="#4a5940" stroke-width="1.4" stroke-linecap="round"/>
-      <path d="M110 135 C128 119 152 118 176 123" fill="none" stroke="#4a5940" stroke-width="1.3" stroke-linecap="round"/>
-      <!-- leaves left -->
-      <ellipse cx="52" cy="280" rx="16" ry="10" transform="rotate(-30 52 280)" fill="#4a5940"/>
-      <ellipse cx="44" cy="232" rx="15" ry="9" transform="rotate(-25 44 232)" fill="#4a5940"/>
-      <ellipse cx="40" cy="183" rx="14" ry="9" transform="rotate(-20 40 183)" fill="#4a5940"/>
-      <ellipse cx="42" cy="141" rx="14" ry="8" transform="rotate(-15 42 141)" fill="#4a5940"/>
-      <ellipse cx="44" cy="98" rx="13" ry="8" transform="rotate(-10 44 98)" fill="#4a5940"/>
-      <!-- leaves right -->
-      <ellipse cx="205" cy="253" rx="16" ry="10" transform="rotate(30 205 253)" fill="#4a5940"/>
-      <ellipse cx="198" cy="210" rx="15" ry="9" transform="rotate(25 198 210)" fill="#4a5940"/>
-      <ellipse cx="191" cy="163" rx="14" ry="9" transform="rotate(20 191 163)" fill="#4a5940"/>
-      <ellipse cx="179" cy="121" rx="13" ry="8" transform="rotate(15 179 121)" fill="#4a5940"/>
-      <!-- tip leaves -->
-      <ellipse cx="100" cy="18" rx="10" ry="7" transform="rotate(-5 100 18)" fill="#4a5940"/>
-      <ellipse cx="108" cy="8" rx="8" ry="6" transform="rotate(10 108 8)" fill="#4a5940"/>
-    </symbol>
-  </defs>
-</svg>
+<main id="mainContent" style="display:none">
 
-<!-- ═══════════════════════ HERO ═══════════════════════ -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <svg class="hero-twig tl" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="hero-twig br" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="hero-twig tr" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="hero-twig bl" viewBox="0 0 280 380"><use href="#twig"/></svg>
-
-  <div class="hero-inner">
-    <div class="hero-monogram">CJ<span class="hero-amp">&</span>LJ</div>
-    <div class="hero-divider"></div>
-    <p class="hero-tagline">
-      By God's grace, together with our families,<br>
-      we invite you to celebrate our wedding.
-    </p>
-    <div class="hero-date">Saturday · November 21, 2026 · 1:30 PM</div>
-    <div class="countdown-wrap">
-      <span class="countdown-label">Counting down to forever</span>
-      <div class="countdown-grid">
-        <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">Days</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">Hours</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">Minutes</span></div>
-        <div class="cd-sep">·</div>
-        <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">Seconds</span></div>
-      </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-watercolor"></div>
+  <div class="butterfly-layer" id="heroBf"></div>
+  <div class="hero-content reveal">
+    <span class="hero-eyebrow">A Blessed Occasion</span>
+    <h1 class="hero-name">Kali Heart</h1>
+    <p class="hero-event">Baptism Celebration</p>
+    <p class="hero-date">December 13, 2026</p>
+    <p class="hero-time">Sunday ✦ 3:00 PM</p>
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><span class="cd-num" id="cdMonths">—</span><span class="cd-label">Months</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdDays">—</span><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdHours">—</span><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cdMins">—</span><span class="cd-label">Minutes</span></div>
     </div>
-  </div>
-  <div class="scroll-hint">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M12 5v14M5 12l7 7 7-7"/>
-    </svg>
-    Scroll
   </div>
 </section>
 
-<!-- ═══════════════════════ LOCATION ═══════════════════════ -->
-<section class="has-mobile-bg location-section" id="location">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/14.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <!-- twig decorations -->
-  <svg class="twig-deco tl" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380"><use href="#twig"/></svg>
+<!-- WELCOME -->
+<section id="welcome" class="section">
+  <div class="welcome-inner reveal">
+    <p class="section-label">A Warm Welcome</p>
+    <h2 class="section-title">A Blessed Celebration</h2>
+    <div class="divider"><span>🦋</span></div>
+    <blockquote class="welcome-quote">
+      "By God's grace, we come together to celebrate a beautiful milestone in Kali Heart's life. We warmly invite you to join us in prayer and celebration as she receives the sacrament of Baptism."
+    </blockquote>
+  </div>
+</section>
 
+<!-- DETAILS -->
+<section id="details" class="section">
   <div class="container">
-    <span class="section-label reveal">Find Us</span>
-    <h2 class="section-title reveal">Location Guide</h2>
-    <div class="section-rule reveal"></div>
-
-    <div class="venue-cards">
-      <!-- Ceremony -->
-      <div class="venue-card reveal-left d1">
-        <div class="venue-illustration">
-          <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/ceremony%20placeholder.jpg" alt="Imus Cathedral" loading="lazy">
-        </div>
-        <div class="venue-body">
-          <span class="venue-type">Ceremony</span>
-          <div class="venue-name">Imus Cathedral</div>
-          <div class="venue-address">General Castañeda St, Imus, Cavite</div>
-          <a class="map-btn" href="https://maps.google.com/?q=Imus+Cathedral+General+Castaneda+St+Imus+Cavite" target="_blank" rel="noopener">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Open in Maps
-          </a>
-        </div>
-      </div>
-      <!-- Reception -->
-      <div class="venue-card reveal-right d2">
-        <div class="venue-illustration">
-          <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/reception%20placeholder.jpg" alt="Casa Dominguez" loading="lazy">
-        </div>
-        <div class="venue-body">
-          <span class="venue-type">Reception</span>
-          <div class="venue-name">Casa Dominguez</div>
-          <div class="venue-address">M. Salud Rd, Alapan II-B, Imus, Cavite</div>
-          <a class="map-btn" href="https://maps.google.com/?q=Casa+Dominguez+M.+Salud+Rd+Alapan+II-B+Imus+Cavite" target="_blank" rel="noopener">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Open in Maps
-          </a>
-        </div>
-      </div>
+    <div class="text-center reveal">
+      <p class="section-label">Where &amp; When</p>
+      <h2 class="section-title">Celebration Details</h2>
+      <div class="divider"><span>✦</span></div>
     </div>
-
-    <span class="section-label reveal" style="margin-bottom:1rem;">Please Take Note</span>
-    <div class="notes-grid reveal">
-      <div class="note-item">🕐 <span>We kindly ask that you <strong>arrive on time at the church ceremony</strong> and <strong>stay with us until the end</strong> of the wedding reception program.</span></div>
-      <div class="note-item">🚗 <span>Travel time from the church to reception is approximately <strong>30 minutes</strong>. Please plan accordingly.</span></div>
-      <div class="note-item">🅿️ <span>Parking space is <strong>available</strong> at the venue. Please proceed to the designated parking area upon arrival.</span></div>
-      <div class="note-item">🪑 <span>Upon arrival, kindly proceed to the coordinator to <strong>check your seating assignment</strong> and receive your <strong>bingo cards!</strong> Complete it and have a chance to win a raffle prize!</span></div>
-      <div class="note-item">📸 <span>We will be having our <strong>post-nuptial shoot</strong> during this time. We appreciate your patience — relax and enjoy the venue!</span></div>
-      <div class="note-item">👶 <span>Your children are precious to us, but to keep the day solemn and enjoyable, we kindly request an <strong>adults-only</strong> celebration.</span></div>
+    <div class="details-grid">
+      <div class="detail-card reveal">
+        <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/chruch.jpg" alt="San Vicente Ferrer Parish" class="venue-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="venue-placeholder" style="display:none">
+          <svg viewBox="0 0 100 100" fill="none"><path d="M50 10 L90 35 L90 90 L10 90 L10 35 Z" stroke="#A8842C" stroke-width="3" fill="none"/><rect x="40" y="65" width="20" height="25" stroke="#A8842C" stroke-width="2" fill="none"/><path d="M50 5 L50 15" stroke="#A8842C" stroke-width="3"/><circle cx="50" cy="3" r="3" fill="#A8842C"/></svg>
+          <span>Church Photo</span>
+        </div>
+        <span class="detail-icon">⛪</span>
+        <h3 class="detail-card-title">Holy Baptism</h3>
+        <div class="detail-row"><span class="label">Date</span><span class="value">December 13, 2026 — Sunday</span></div>
+        <div class="detail-row"><span class="label">Time</span><span class="value">3:00 PM</span></div>
+        <div class="detail-row"><span class="label">Venue</span><span class="value">San Vicente Ferrer Parish<br>Calulut, City of San Fernando, Pampanga</span></div>
+        <a href="https://maps.google.com/?q=San+Vicente+Ferrer+Parish+Calulut+San+Fernando+Pampanga" target="_blank" class="maps-btn">📍 Open in Google Maps</a>
+      </div>
+      <div class="detail-card reveal">
+        <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/yiyi.jpg" alt="Yiyi Chinese Eating House" class="venue-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="venue-placeholder" style="display:none">
+          <svg viewBox="0 0 100 100" fill="none"><rect x="15" y="40" width="70" height="50" stroke="#A8842C" stroke-width="3" fill="none"/><path d="M10 40 L50 10 L90 40" stroke="#A8842C" stroke-width="3" fill="none"/><rect x="38" y="60" width="24" height="30" stroke="#A8842C" stroke-width="2" fill="none"/></svg>
+          <span>Venue Photo</span>
+        </div>
+        <span class="detail-icon">🥂</span>
+        <h3 class="detail-card-title">Reception</h3>
+        <div class="detail-row"><span class="label">Following the Ceremony</span><span class="value">Approximately 4:30 PM</span></div>
+        <div class="detail-row"><span class="label">Venue</span><span class="value">Yiyi Chinese Eating House<br>Lazatin Blvd., Brgy. Dolores<br>City of San Fernando, Pampanga</span></div>
+        <a href="https://maps.google.com/?q=Yiyi+Chinese+Eating+House+Lazatin+Blvd+San+Fernando+Pampanga" target="_blank" class="maps-btn">📍 Open in Google Maps</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════ TIMELINE ═══════════════════════ -->
-<section class="has-mobile-bg timeline-section" id="timeline">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/3.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.06;"><use href="#twig"/></svg>
-  <svg class="twig-deco mr" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-
-  <span class="section-label reveal">What to Expect</span>
-  <h2 class="section-title reveal">Our Wedding Timeline</h2>
-  <div class="section-rule reveal"></div>
-  <div class="timeline-track reveal">
-    <div class="timeline-item"><div class="t-dot">⛪</div><div class="t-time">1:30 PM</div><div class="t-label">Ceremony</div></div>
-    <div class="timeline-item"><div class="t-dot">💑</div><div class="t-time">3:00 PM</div><div class="t-label">Post-Nup</div></div>
-    <div class="timeline-item"><div class="t-dot">🥂</div><div class="t-time">4:00 PM</div><div class="t-label">Cocktails</div></div>
-    <div class="timeline-item"><div class="t-dot">✨</div><div class="t-time">5:30 PM</div><div class="t-label">Program</div></div>
-    <div class="timeline-item"><div class="t-dot">🍽️</div><div class="t-time">7:00 PM</div><div class="t-label">Dinner</div></div>
-    <div class="timeline-item"><div class="t-dot">🚗</div><div class="t-time">9:00 PM</div><div class="t-label">Send-Off</div></div>
-  </div>
-  <p class="timeline-note reveal">
-    Guests are kindly requested to arrive 15 minutes before 1:30 PM<br>
-    to allow for a prompt start, as the church observes strict timing.
-  </p>
-</section>
-
-<!-- ═══════════════════════ ATTIRE ═══════════════════════ -->
-<section class="has-mobile-bg attire-section" id="attire">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/4.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380" style="opacity:0.04;"><use href="#twig"/></svg>
-
+<!-- TIMELINE -->
+<section id="timeline" class="section">
   <div class="container">
-    <span class="section-label reveal">Dress Code</span>
-    <h2 class="section-title reveal">What to Wear</h2>
-    <div class="section-rule reveal"></div>
-
-    <!-- ── Figure Row ── -->
-    <div class="attire-figures-row reveal">
-
-      <!-- Female Guest -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- dress body -->
-          <path d="M28 38 Q24 55 18 100 Q14 130 12 165 L68 165 Q66 130 62 100 Q56 55 52 38 Z" fill="#c4b09a"/>
-          <!-- shoulder seam -->
-          <line x1="28" y1="45" x2="52" y2="45" stroke="#b8a898" stroke-width="1.5" opacity="0.6"/>
-        </svg>
-        <div class="fig-label">Female<br>Guest</div>
-        <div class="fig-color">Brown/Beige</div>
-      </div>
-
-      <!-- Male Guest -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- torso -->
-          <rect x="22" y="40" width="36" height="52" rx="3" fill="#9e8f80"/>
-          <!-- tie -->
-          <rect x="36" y="42" width="8" height="44" rx="2" fill="#c9a96e" opacity="0.7"/>
-          <!-- left leg -->
-          <rect x="22" y="90" width="16" height="72" rx="2" fill="#9e8f80"/>
-          <!-- right leg -->
-          <rect x="42" y="90" width="16" height="72" rx="2" fill="#9e8f80"/>
-        </svg>
-        <div class="fig-label">Male<br>Guest</div>
-        <div class="fig-color">Brown/Beige</div>
-      </div>
-
-      <!-- Godmother -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- dress -->
-          <path d="M28 38 Q24 55 18 100 Q14 130 12 165 L68 165 Q66 130 62 100 Q56 55 52 38 Z" fill="#7a90a8"/>
-          <line x1="28" y1="45" x2="52" y2="45" stroke="#6880a0" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        <div class="fig-label">Godmother</div>
-        <div class="fig-color">Dusty Blue</div>
-      </div>
-
-      <!-- Godfather -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- torso/jacket -->
-          <rect x="22" y="40" width="36" height="52" rx="3" fill="#2d2d3a"/>
-          <!-- tie - dusty blue -->
-          <rect x="36" y="42" width="8" height="44" rx="2" fill="#7a90a8" opacity="0.9"/>
-          <!-- left leg -->
-          <rect x="22" y="90" width="16" height="72" rx="2" fill="#2d2d3a"/>
-          <!-- right leg -->
-          <rect x="42" y="90" width="16" height="72" rx="2" fill="#2d2d3a"/>
-        </svg>
-        <div class="fig-label">Godfather</div>
-        <div class="fig-color">Black + Dusty Blue</div>
-      </div>
-
-      <!-- Maid of Honor & Bridesmaid -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- dress - moss green -->
-          <path d="M28 38 Q24 55 18 100 Q14 130 12 165 L68 165 Q66 130 62 100 Q56 55 52 38 Z" fill="#4a7c5f"/>
-          <line x1="28" y1="45" x2="52" y2="45" stroke="#3d6b50" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        <div class="fig-label">Maid of Honor &amp;<br>Bridesmaid</div>
-        <div class="fig-color">Moss Green</div>
-      </div>
-
-      <!-- Best Man & Groomsmen -->
-      <div class="attire-figure">
-        <svg class="fig-peg" viewBox="0 0 80 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
-          <circle cx="40" cy="22" r="16" fill="#c8a97e"/>
-          <!-- torso/jacket - mid gray -->
-          <rect x="22" y="40" width="36" height="52" rx="3" fill="#6b7280"/>
-          <!-- tie - moss green -->
-          <rect x="36" y="42" width="8" height="44" rx="2" fill="#4a7c5f" opacity="0.9"/>
-          <!-- left leg -->
-          <rect x="22" y="90" width="16" height="72" rx="2" fill="#6b7280"/>
-          <!-- right leg -->
-          <rect x="42" y="90" width="16" height="72" rx="2" fill="#6b7280"/>
-        </svg>
-        <div class="fig-label">Best Man &amp;<br>Groomsmen</div>
-        <div class="fig-color">Mid Gray</div>
-      </div>
-
+    <div class="text-center reveal">
+      <p class="section-label">The Day's Journey</p>
+      <h2 class="section-title">Celebration Schedule</h2>
+      <div class="divider"><span>🦋</span></div>
     </div>
-    <!-- ── End Figure Row ── -->
-
-    <!-- Color Bar -->
-    <div class="attire-colorbar reveal">
-      <span style="background:#c4b09a; flex:2;"></span>
-      <span style="background:#9e8f80; flex:2;"></span>
-      <span style="background:#7a90a8; flex:1.5;"></span>
-      <span style="background:#2d2d3a; flex:1.5;"></span>
-      <span style="background:#4a7c5f; flex:2;"></span>
-      <span style="background:#6b7280; flex:2;"></span>
+    <div class="timeline-wrap reveal">
+      <div class="t-item"><div class="t-dot"></div><div class="t-time">2:35 PM</div><div class="t-event">God Parents Arrival</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#A890D8,#7BB8E0)"></div><div class="t-time">3:00 PM</div><div class="t-event">Holy Baptism Ceremony Begins</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#7BB8E0,#6EC8A8)"></div><div class="t-time">4:00 PM</div><div class="t-event">Travel to Reception Venue</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#6EC8A8,#E8D060)"></div><div class="t-time">4:30 PM</div><div class="t-event">Welcome &amp; Refreshments</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#E8D060,#E8A070)"></div><div class="t-time">5:00 PM</div><div class="t-event">Program &amp; Celebration</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#E8A070,#E8A0A0)"></div><div class="t-time">6:00 PM</div><div class="t-event">Dinner</div></div>
+      <div class="t-item"><div class="t-dot" style="background:linear-gradient(135deg,#E8A0A0,#A890D8)"></div><div class="t-time">7:00 PM</div><div class="t-event">Closing &amp; Family Photos</div></div>
     </div>
-
-    <!-- Italic quote -->
-    <p class="attire-note reveal">
-      Please feel free to wear comfortable and appropriate wedding attire, and we would appreciate it if you follow the color theme.
-    </p>
-
-    <!-- 3-column breakdown -->
-    <div class="attire-cols reveal">
-
-      <!-- For Guests -->
-      <div>
-        <div class="attire-col-title">For Guests</div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#c4b09a;"></span>
-            <span class="adot" style="background:#b8a898;"></span>
-            <span class="adot" style="background:#d4c4a8;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Female Guests</span>
-            <div class="attire-item-color">Shades of Brown / Beige</div>
-          </div>
-        </div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#9e8f80;"></span>
-            <span class="adot" style="background:#b8a898;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Male Guests</span>
-            <div class="attire-item-color">Shades of Brown / Beige</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- For Principal Sponsors -->
-      <div>
-        <div class="attire-col-title">For Principal Sponsors</div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#7a90a8;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Godmothers</span>
-            <div class="attire-item-color">Dusty Blue</div>
-          </div>
-        </div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#2d2d3a;"></span>
-            <span class="adot" style="background:#7a90a8;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Godfathers</span>
-            <div class="attire-item-color">Black Coat &amp; Pants</div>
-            <div class="attire-item-sub">Dusty Blue necktie</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- For Secondary Sponsors -->
-      <div>
-        <div class="attire-col-title">For Secondary Sponsors</div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#4a7c5f;"></span>
-            <span class="adot" style="background:#5a9470;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Maid of Honor &amp; Bridesmaids</span>
-            <div class="attire-item-color">Moss Green / Emerald</div>
-          </div>
-        </div>
-        <div class="attire-item">
-          <div class="attire-dots">
-            <span class="adot" style="background:#6b7280;"></span>
-            <span class="adot" style="background:#4a7c5f;"></span>
-          </div>
-          <div>
-            <span class="attire-item-role">Best Man &amp; Groomsmen</span>
-            <div class="attire-item-color">Mid Gray Coat &amp; Pants</div>
-            <div class="attire-item-sub">Moss Green / Emerald necktie</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom disclaimer -->
-    <div class="attire-bottom-note reveal">
-      Please reserve <strong>white</strong> and <strong>ivory</strong> for the bride only. We can't wait to see everyone looking beautiful!
-    </div>
-
   </div>
 </section>
 
-<!-- ═══════════════════════ ENTOURAGE ═══════════════════════ -->
-<section class="entourage-section entourage-photo-bg" id="entourage">
-  <div class="ent-photo-bg"></div>
-  <div class="ent-photo-overlay"></div>
-  <svg class="twig-deco tl" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="twig-deco mr" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-
+<!-- ATTIRE -->
+<section id="attire" class="section">
   <div class="container">
-    <span class="section-label reveal">Our People</span>
-    <h2 class="section-title reveal">The Entourage</h2>
-    <div class="section-rule reveal"></div>
-    <div class="entourage-block">
-
-      <!-- 1. Parents of the Couple — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Parents of the Couple</div>
-        <div class="ent-2col">
-          <div class="ent-name">Mr. Joel Redondo</div>
-          <div class="ent-name">Mr. Alvin de Leon</div>
-          <div class="ent-name">Mrs. Rizalina Redondo</div>
-          <div class="ent-name">Mrs. Evangeline de Leon</div>
+    <div class="text-center reveal">
+      <p class="section-label">Dress to Celebrate</p>
+      <h2 class="section-title">Attire Guide</h2>
+      <div class="divider"><span>✦</span></div>
+    </div>
+    <div class="attire-grid">
+      <div class="attire-card reveal">
+        <h3 class="attire-card-title">For God Parents</h3>
+        <p class="attire-note">You hold a sacred role in Kali Heart's life — please dress in white to symbolize this honored blessing.</p>
+        <div style="display:flex;justify-content:center;margin:20px 0">
+          <div class="heart-swatch" style="background:linear-gradient(135deg,#FFFFFF,#F5F0E8)"></div>
+        </div>
+        <div class="attire-reminder">
+          <strong>⏰ Special Reminder:</strong><br>
+          God Parents are kindly requested to arrive at the church at least <strong>25 minutes before</strong> the ceremony begins.
         </div>
       </div>
-
-      <!-- 2. Grandparents — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Grandparents of the Couple</div>
-        <div class="ent-2col">
-          <div class="ent-name">Mr. Martin Teñido</div>
-          <div class="ent-name">Mr. Ramon de Leon</div>
-          <div class="ent-name">Mrs. Eufemia Teñido</div>
-          <div class="ent-name">Mrs. Alicia de Leon</div>
+      <div class="attire-card reveal">
+        <h3 class="attire-card-title">For Guests</h3>
+        <p class="attire-note">Dress code is <em>Casual Attire</em>. We invite you to wear any of these beautiful pastel shades to match the day's whimsical butterfly garden theme.</p>
+        <div class="palette">
+          <div class="heart-swatch" style="background:#AED6F1"></div>
+          <div class="heart-swatch" style="background:#F4C2C2"></div>
+          <div class="heart-swatch" style="background:#C9B8E8"></div>
+          <div class="heart-swatch" style="background:#FFF0A3"></div>
+          <div class="heart-swatch" style="background:#FFCBA4"></div>
+          <div class="heart-swatch" style="background:#B5E5D0"></div>
+          <div class="heart-swatch" style="background:#C9B0D8"></div>
+          <div class="heart-swatch" style="background:#FFB6A3"></div>
+          <div class="heart-swatch" style="background:#BDD9F0"></div>
         </div>
       </div>
-
-      <!-- 3. Ninong and Ninang — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Ninong and Ninang</div>
-        <div class="ent-2col">
-          <div class="ent-name">Mr. Dennis Laurente</div><div class="ent-name">Mrs. Aileen Laurente</div>
-          <div class="ent-name">Mr. Bethoven Arile</div><div class="ent-name">Mrs. Teresa Arile</div>
-          <div class="ent-name">Mr. Gary Balmaceda</div><div class="ent-name">Mrs. Irene Balmaceda</div>
-          <div class="ent-name">Mr. Diego Cruz III</div><div class="ent-name">Mrs. Lorena Cruz</div>
-          <div class="ent-name">Mr. Roldan Redondo</div><div class="ent-name">Ms. Carina Formiloza</div>
-          <div class="ent-name">Mr. Christopher Faral</div><div class="ent-name">Ms. Ivy Almario</div>
-          <div class="ent-name">Mr. Arnold Wagayen</div><div class="ent-name">Ms. Cynthia Almario</div>
-          <div class="ent-name">Mr. Clifford Ariola</div><div class="ent-name">Mrs. Leah Mangune</div>
-          <div class="ent-name">Mr. Winifredo Olvido</div><div class="ent-name">Mrs. Carlota Pagsanjan</div>
-          <div class="ent-name">Mr. Ramilito Correa</div><div class="ent-name">Mrs. Ma. Cecilia Correa</div>
-          <div class="ent-name">Mr. Tony Salamatin</div><div class="ent-name">Mrs. Adora Salamatin</div>
-          <div class="ent-name">Mr. Choi Kyu Jung</div><div class="ent-name">Ms. Mimi Uy</div>
-          <div class="ent-name">Mr. Vincent de Leon</div><div class="ent-name">Mrs. Marily Galang</div>
-          <div class="ent-name">Mr. Robert Gozon</div><div class="ent-name">Mrs. Nimfa Gozon</div>
-        </div>
-      </div>
-
-      <!-- 4. Man of Honor & Matron of Honor — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="ent-roles-2col">
-          <div>
-            <span class="ent-role-title">Man of Honor</span>
-            <div class="ent-name">Lance Justin de Leon</div>
-          </div>
-          <div>
-            <span class="ent-role-title">Matron of Honor</span>
-            <div class="ent-name">Czarina Jeane Sabenorio</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. Best Men — 1 column centered -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Best Men</div>
-        <div class="ent-1col">
-          <div class="ent-name">Jan Rei Salamatin</div>
-          <div class="ent-name">Jun Jun Taguba</div>
-          <div class="ent-name">Christian Maurice Esteban</div>
-        </div>
-      </div>
-
-      <!-- 6. Candle Sponsor & Cord Sponsor — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="ent-roles-2col">
-          <div>
-            <span class="ent-role-title">Candle Sponsor</span>
-            <div class="ent-name">Jean Patrick Casano</div>
-            <div class="ent-name">Claire Josephine Aranda</div>
-          </div>
-          <div>
-            <span class="ent-role-title">Cord Sponsor</span>
-            <div class="ent-name">King Reniel Rodriguez</div>
-            <div class="ent-name">Alicia Nicole Allorde</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7. Veil Sponsor — 1 column centered -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Veil Sponsor</div>
-        <div class="ent-1col">
-          <div class="ent-name">John Emmanuel Francis Abdon</div>
-          <div class="ent-name">Joylyn May Catalan</div>
-        </div>
-      </div>
-
-      <!-- 8. Groomsmen & Bridesmaids — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="ent-roles-2col">
-          <div>
-            <span class="ent-role-title">Groomsmen</span>
-            <div class="ent-name">Frangelo Teñido</div>
-            <div class="ent-name">Christian Jay Laderas</div>
-            <div class="ent-name">Mark Joseph Jao</div>
-            <div class="ent-name">Frederick Du</div>
-            <div class="ent-name">Rafhael Sinchongco</div>
-            <div class="ent-name">John Lloyd Socobos</div>
-            <div class="ent-name">Dennis Domingo Jr.</div>
-            <div class="ent-name">Earl Nique Floie Cruz</div>
-            <div class="ent-name">Renz Amiel Reyes</div>
-          </div>
-          <div>
-            <span class="ent-role-title">Bridesmaids</span>
-            <div class="ent-name">Crizelle Joyce Redondo</div>
-            <div class="ent-name">Queenie Laurente</div>
-            <div class="ent-name">Alyanna Laurente</div>
-            <div class="ent-name">Reign Bernardo</div>
-            <div class="ent-name">Christal Aila Pabalan</div>
-            <div class="ent-name">Christine Joy Valencia</div>
-            <div class="ent-name">Michelle Anne Montes</div>
-            <div class="ent-name">Rose Ann Garcia</div>
-            <div class="ent-name">Inah Marie</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. Junior Bridesmaids — 1 column centered -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Junior Bridesmaids</div>
-        <div class="ent-1col">
-          <div class="ent-name">Cristelle Jenica Redondo</div>
-          <div class="ent-name">Arianne Shanelle Aeiou de Leon</div>
-          <div class="ent-name">Althea Joy Lianza</div>
-          <div class="ent-name">Marianne Ashlee de Leon</div>
-          <div class="ent-name">Aliyah Joselle Lianza</div>
-        </div>
-      </div>
-
-      <!-- 10. Ring Bearers & Bible Bearers — 2 columns -->
-      <div class="entourage-group reveal">
-        <div class="ent-roles-2col">
-          <div>
-            <span class="ent-role-title">Ring Bearers</span>
-            <div class="ent-name">John Vincent dela Cruz</div>
-            <div class="ent-name">Alonzo Louis Villavelez</div>
-          </div>
-          <div>
-            <span class="ent-role-title">Bible Bearers</span>
-            <div class="ent-name">Gabriel Laurente</div>
-            <div class="ent-name">Josiah Grae Laurente</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 11. Coin Bearer — 1 column centered -->
-      <div class="entourage-group reveal">
-        <div class="entourage-group-title">Coin Bearer</div>
-        <div class="ent-1col">
-          <div class="ent-name">Arwin Ezikiel de Leon</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════ GIFT ═══════════════════════ -->
-<section class="has-mobile-bg gift-section" id="gifts">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/6.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.06;"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-
-  <div class="gift-inner">
-    <span class="section-label">With Love</span>
-    <h2 class="section-title">Gift Registry</h2>
-    <div class="section-rule"></div>
-    <p class="gift-intro">
-      We would be truly honored to celebrate this special day with you in person, though we completely understand if you are unable to join us. Your prayers and well wishes for our marriage are the greatest blessings we could receive.<br><br>
-      As some have thoughtfully asked, we have made options available should you wish to share your blessings — whichever you'd like to bless, your choice, with our gratitude.
-    </p>
-    <div class="gift-cards">
-      <div class="gift-card">
-        <span class="gift-bank bdo">BDO</span>
-        <div class="gift-purpose">FutureHome</div>
-        <div class="gift-acct">••••••••9632</div>
-        <div class="qr-img">
-          <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/BDO%20QR%20Placeholder.jpg" alt="BDO QR Code" loading="lazy">
-        </div>
-      </div>
-      <div class="gift-card">
-        <span class="gift-bank bpi">BPI</span>
-        <div class="gift-purpose">FutureKids</div>
-        <div class="gift-acct">••••••••••594</div>
-        <div class="qr-img">
-          <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/BPI%20placeholder.jpg" alt="BPI QR Code" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <p class="gift-closing">Thank you from the bottom of our hearts.<br>With love,<br>CJ & LJ</p>
-  </div>
-</section>
-
-<!-- ═══════════════════════ VIDEO ═══════════════════════ -->
-<section class="video-section has-mobile-bg" id="video">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/11.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380" style="opacity:0.04;"><use href="#twig"/></svg>
+<!-- GIFT -->
+<section id="gift" class="section">
   <div class="container">
-    <span class="section-label reveal">Before Forever</span>
-    <h2 class="section-title reveal">Our Prenuptial Video</h2>
-    <div class="section-rule reveal"></div>
-    <div class="video-wrap reveal">
-      <iframe
-        src="https://www.youtube.com/embed/KkRTdKnBdpM?rel=0&modestbranding=1&color=white"
-        title="CJ & LJ Prenuptial Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+    <div class="gift-inner reveal">
+      <p class="section-label">With Grateful Hearts</p>
+      <h2 class="section-title">Gift Guide</h2>
+      <div class="divider"><span>🦋</span></div>
+      <p class="gift-quote">
+        With heartfelt thanks, we kindly ask for your understanding that we are unable to accept boxed gifts due to our travel back to the USA.<br><br>
+        Should you wish to bless Kali Heart with a gift, a monetary contribution in lieu of presents would be sincerely appreciated.<br><br>
+        Most importantly, your love, prayers, and presence are the greatest gifts we could receive.
+      </p>
+      <div class="qr-row">
+        <div class="qr-box">
+          <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/maribank.jpg" alt="Maribank QR Code" class="qr-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-placeholder" style="display:none">Maribank QR</div>
+          <p class="qr-label">Maribank</p>
+          <p class="qr-note">Scan to send your blessings 🦋</p>
+        </div>
+        <div class="qr-box">
+          <img src="https://raw.githubusercontent.com/nexcellentsolutions2021/kaliheartbaptismalwebsite/refs/heads/main/zelle.jpg" alt="Zelle QR Code" class="qr-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="qr-placeholder" style="display:none">Zelle QR</div>
+          <p class="qr-label">Zelle</p>
+          <p class="qr-note">Scan to send your blessings 🦋</p>
+        </div>
+      </div>
     </div>
-    <p class="video-caption reveal">A glimpse of our love story before the big day.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════ RSVP ═══════════════════════ -->
-<div class="rsvp-section" id="rsvp">
-  <div class="rsvp-header">
-    <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.06;"><use href="#twig"/></svg>
-    <svg class="twig-deco mr" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-    <span class="section-label" style="position:relative;z-index:2;">Kindly Reply</span>
-    <h2 class="section-title" style="position:relative;z-index:2;">RSVP</h2>
-    <div class="section-rule" style="position:relative;z-index:2;"></div>
-    <p>Please RSVP until October 16, 2026.<br>
-    If we do not receive your RSVP by then, we will assume that you are unable to attend, and your reserved seat will be given to someone else.<br>
-    We completely understand if you cannot make it. We would truly appreciate it if you could let us know ahead of time, so we can offer your seat to another person close to our hearts.<br>
-    Thank you so much for understanding and helping us finalize our guest list. We can't wait to celebrate this special day with you!</p>
-  </div>
-  <div class="rsvp-frame-wrap">
-    <iframe
-      src="https://script.google.com/macros/s/AKfycbxcs2X3g1zkDxAPh0fZrFYfrNJkepcijrTW8m_Hp3gTAB-KRef7sCmXIMxGY228gEcM/exec"
-      title="RSVP Form" loading="lazy" allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-<!-- ═══════════════════════ UPLOAD ═══════════════════════ -->
-<section class="has-mobile-bg uploads-section" id="upload">
-  <div class="mob-bg" style="background-image:url('https://ik.imagekit.io/jcsquo5nq/cjandlj/7.jpg');"></div>
-  <div class="mob-bg-overlay"></div>
-  <svg class="twig-deco tr" viewBox="0 0 280 380"><use href="#twig"/></svg>
-  <svg class="twig-deco bl" viewBox="0 0 280 380"><use href="#twig"/></svg>
-
+<!-- REMINDERS -->
+<section id="reminders" class="section">
   <div class="container">
-    <span class="section-label reveal">Share Your Memories</span>
-    <h2 class="section-title reveal">Upload to Our Drive</h2>
-    <div class="section-rule reveal"></div>
-    <p class="upload-desc reveal">
-      Captured a wonderful moment from our special day? We'd love to see it through your eyes. Upload your photos and videos to our shared Google Drive folder.
-    </p>
-    <a class="upload-btn reveal" href="https://drive.google.com/drive/folders/1nZwh8iYLr-RXZ98rIKpDDOGik0cQYNHH" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-      Upload to Google Drive
-    </a>
+    <div class="text-center reveal">
+      <p class="section-label">Keeping Kali Heart Safe</p>
+      <h2 class="section-title">A Gentle Reminder</h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="section-sub">For the protection and well-being of our baby, we kindly request your cooperation:</p>
+    </div>
+    <div class="reminders-grid reveal">
+      <div class="reminder-card"><span class="reminder-icon">💋</span><p class="reminder-text">No kissing the baby</p></div>
+      <div class="reminder-card"><span class="reminder-icon">🚭</span><p class="reminder-text">No smoking near the venue</p></div>
+      <div class="reminder-card"><span class="reminder-icon">🧴</span><p class="reminder-text">Please sanitize your hands before holding the baby</p></div>
+      <div class="reminder-card"><span class="reminder-icon">😷</span><p class="reminder-text">Wear a face mask if feeling unwell</p></div>
+      <div class="reminder-card"><span class="reminder-icon">🤒</span><p class="reminder-text">Kindly refrain from contact if you are sick</p></div>
+    </div>
+    <p class="reminders-footer reveal">Thank you for your understanding, love, and cooperation. 🤍</p>
   </div>
 </section>
 
-<!-- ═══════════════════════ GALLERY ═══════════════════════ -->
-<div class="photo-section" id="photos">
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.06;"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-
-  <div style="text-align:center;margin-bottom:2rem;position:relative;z-index:2;">
-    <span class="section-label" style="color:rgba(255,255,255,0.5)">Our Story</span>
-    <h2 class="section-title" style="color:white">Our Moments</h2>
-    <div class="section-rule" style="background:var(--gold-light)"></div>
-  </div>
-
-  <div class="gallery-grid">
-    <div class="gallery-item reveal" onclick="openLightbox(0)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/1.jpg" alt="CJ and LJ photo 1" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(1)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/2.jpg" alt="CJ and LJ photo 2" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(2)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/3.jpg" alt="CJ and LJ photo 3" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(3)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/4.jpg" alt="CJ and LJ photo 4" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(4)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/5.jpg" alt="CJ and LJ photo 5" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(5)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/6.jpg" alt="CJ and LJ photo 6" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(6)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/7.jpg" alt="CJ and LJ photo 7" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(7)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/8.jpg" alt="CJ and LJ photo 8" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(8)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/9.jpg" alt="CJ and LJ photo 9" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(9)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/10.jpg" alt="CJ and LJ photo 10" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(10)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/11.jpg" alt="CJ and LJ photo 11" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(11)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/12.jpg" alt="CJ and LJ photo 12" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(12)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/13.jpg" alt="CJ and LJ photo 13" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(13)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/14.jpg" alt="CJ and LJ photo 14" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(14)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/15.jpg" alt="CJ and LJ photo 15" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(15)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/16.jpg" alt="CJ and LJ photo 16" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
-      </div>
-    </div>
-    <div class="gallery-item reveal" onclick="openLightbox(16)">
-      <img src="https://ik.imagekit.io/jcsquo5nq/cjandlj/17.jpg" alt="CJ and LJ photo 17" loading="lazy">
-      <div class="gallery-item-overlay">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-        </svg>
+<!-- RSVP -->
+<section id="rsvp" class="section">
+  <div class="container">
+    <div class="rsvp-inner reveal">
+      <p class="section-label">Kindly Respond</p>
+      <h2 class="section-title">Will You Join Us?</h2>
+      <div class="divider"><span>🦋</span></div>
+      <p class="section-sub">"We would be honored to celebrate this special day with you and your family."</p>
+      <div class="rsvp-deadline">RSVP Deadline: <strong>Before December 5, 2026</strong></div>
+      <div class="rsvp-embed-wrap">
+        <iframe src="https://script.google.com/macros/s/AKfycbxyGsgm58HqJxTMtjt7EKGymjXECASrPoITRrzhmajUC3GsK4hFDB_LHKu4fTMkNIrM/exec" width="100%" height="900" frameborder="0" loading="lazy" title="RSVP Form"></iframe>
       </div>
     </div>
   </div>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
-    <button class="lb-close" onclick="closeLightbox()">&#x2715;</button>
-    <button class="lb-prev" onclick="lbNav(-1)">&#8592;</button>
-    <div class="lightbox-inner">
-      <img class="lightbox-img" id="lb-img" src="" alt="">
-    </div>
-    <button class="lb-next" onclick="lbNav(1)">&#8594;</button>
-    <div class="lb-counter" id="lb-counter"></div>
-  </div>
-</div>
-
-<!-- ═══════════════════════ CLOSING ═══════════════════════ -->
-<section class="closing-section">
-  <svg class="twig-deco tl" viewBox="0 0 280 380" style="opacity:0.06;"><use href="#twig"/></svg>
-  <svg class="twig-deco br" viewBox="0 0 280 380" style="opacity:0.05;"><use href="#twig"/></svg>
-  <div class="closing-monogram" style="color:#ffffff;">CJ & LJ</div>
-  <p class="closing-text">We look forward to celebrating the beginning of our forever with each and every one of you. Thank you from the bottom of our hearts.</p>
-  <p class="closing-names">With Love · CJ & LJ</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  Made with <span class="heart">♥</span> by <a href="https://tiktok.com/@loveanne.ph" target="_blank" rel="noopener">Love, Anne</a>
+  <svg class="wc-corner tl" viewBox="0 0 140 140" fill="none"><circle cx="30" cy="30" r="20" fill="#E8A0A0" opacity=".6"/><circle cx="55" cy="15" r="13" fill="#A890D8" opacity=".5"/><circle cx="15" cy="60" r="15" fill="#7BB8E0" opacity=".5"/><path d="M20 20 Q50 5 75 30 Q50 55 20 40 Z" fill="#E8A0A0" opacity=".3"/><circle cx="80" cy="25" r="8" fill="#E8A070" opacity=".45"/><circle cx="25" cy="80" r="8" fill="#6EC8A8" opacity=".45"/><circle cx="45" cy="45" r="5" fill="#E8D060" opacity=".5"/></svg>
+  <svg class="wc-corner tr" viewBox="0 0 140 140" fill="none"><circle cx="30" cy="30" r="20" fill="#E8A0A0" opacity=".6"/><circle cx="55" cy="15" r="13" fill="#A890D8" opacity=".5"/><circle cx="15" cy="60" r="15" fill="#7BB8E0" opacity=".5"/><path d="M20 20 Q50 5 75 30 Q50 55 20 40 Z" fill="#E8A0A0" opacity=".3"/><circle cx="80" cy="25" r="8" fill="#E8A070" opacity=".45"/></svg>
+  <svg class="wc-corner bl" viewBox="0 0 140 140" fill="none"><circle cx="30" cy="30" r="20" fill="#6EC8A8" opacity=".6"/><circle cx="55" cy="15" r="13" fill="#E8D060" opacity=".5"/><circle cx="15" cy="60" r="15" fill="#E8A070" opacity=".5"/><path d="M20 20 Q50 5 75 30 Q50 55 20 40 Z" fill="#6EC8A8" opacity=".3"/></svg>
+  <svg class="wc-corner br" viewBox="0 0 140 140" fill="none"><circle cx="30" cy="30" r="20" fill="#6EC8A8" opacity=".6"/><circle cx="55" cy="15" r="13" fill="#E8D060" opacity=".5"/><circle cx="15" cy="60" r="15" fill="#E8A070" opacity=".5"/><path d="M20 20 Q50 5 75 30 Q50 55 20 40 Z" fill="#6EC8A8" opacity=".3"/></svg>
+  <div class="butterfly-layer" id="footerBf"></div>
+  <div style="position:relative;z-index:2">
+    <p class="footer-name">Kali Heart</p>
+    <p class="footer-sub">Baptism Celebration ✦ December 13, 2026</p>
+    <div class="divider"><span>🦋</span></div>
+    <p class="footer-quote">"Just as a butterfly unfolds its wings, faith helps us grow into God's beautiful purpose.<br>Thank you for celebrating Kali Heart's Baptism and surrounding her with your love and prayers."</p>
+    <p class="footer-copy">Made with love ✦ Kali Heart's Family</p>
+  </div>
 </footer>
 
+</main>
+
 <script>
-  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+/* ══ BUTTERFLY SVG ══ */
+function makeButterflyEl(size, c1, c2, dur, delay, x, y) {
+  const svg = `<svg width="${size}" height="${size*.7}" viewBox="0 0 60 42" fill="none">
+    <path d="M30 21 Q10 2 4 12 Q0 22 30 24 Z" fill="${c1}" opacity=".8"/>
+    <path d="M30 21 Q50 2 56 12 Q60 22 30 24 Z" fill="${c1}" opacity=".8"/>
+    <path d="M30 21 Q12 26 10 36 Q10 42 30 38 Z" fill="${c2}" opacity=".65"/>
+    <path d="M30 21 Q48 26 50 36 Q50 42 30 38 Z" fill="${c2}" opacity=".65"/>
+    <ellipse cx="30" cy="28" rx="2" ry="7" fill="#2A1A0E" opacity=".4"/>
+    <path d="M30 21 Q26 16 24 14" stroke="#2A1A0E" stroke-width="1" opacity=".35"/>
+    <path d="M30 21 Q34 16 36 14" stroke="#2A1A0E" stroke-width="1" opacity=".35"/>
+  </svg>`;
+  const d = document.createElement('div');
+  d.className = 'bf';
+  d.innerHTML = svg;
+  d.style.cssText = `left:${x}%;top:${y}%;width:${size}px;animation-duration:${dur}s;animation-delay:${delay}s;`;
+  return d;
+}
 
-  // ── COUNTDOWN ──
-  function updateCountdown() {
-    const target = new Date('2026-11-21T13:30:00+08:00').getTime();
-    const now = Date.now();
-    const diff = target - now;
-    if (diff <= 0) {
-      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
-      return;
+/* ══ FLOWER SVG ══ */
+function makeFlowerEl(size, color, dur, delay, x, y) {
+  const petals = [0,60,120,180,240,300].map(a =>
+    `<ellipse cx="50" cy="50" rx="9" ry="18" fill="${color}" opacity=".75" transform="rotate(${a},50,50) translate(0,-18)"/>`
+  ).join('');
+  const svg = `<svg width="${size}" height="${size}" viewBox="0 0 100 100" fill="none">
+    ${petals}
+    <circle cx="50" cy="50" r="10" fill="#FFF8F0" opacity=".9"/>
+    <circle cx="50" cy="50" r="6" fill="${color}" opacity=".6"/>
+  </svg>`;
+  const d = document.createElement('div');
+  d.className = 'fl';
+  d.innerHTML = svg;
+  d.style.cssText = `position:absolute;left:${x}%;top:${y}%;width:${size}px;height:${size}px;animation-duration:${dur}s;animation-delay:${delay}s;pointer-events:none;`;
+  return d;
+}
+
+const bfColors = [
+  ['#E8A0A0','#A890D8'],['#7BB8E0','#6EC8A8'],['#E8A070','#E8D060'],
+  ['#A890D8','#E8A0A0'],['#6EC8A8','#7BB8E0'],['#E8D060','#E8A070'],
+  ['#E8A0A0','#7BB8E0'],['#A890D8','#6EC8A8']
+];
+const flColors = ['#E8A0A0','#A890D8','#7BB8E0','#6EC8A8','#E8D060','#E8A070','#C9B0D8','#FFB6A3'];
+
+function spawnElements(container, bfCount, flCount) {
+  for (let i = 0; i < bfCount; i++) {
+    const c = bfColors[i % bfColors.length];
+    container.appendChild(makeButterflyEl(
+      20 + Math.random()*28, c[0], c[1],
+      6 + Math.random()*10, Math.random()*-12,
+      Math.random()*90, Math.random()*85
+    ));
+  }
+  for (let i = 0; i < flCount; i++) {
+    const col = flColors[i % flColors.length];
+    container.appendChild(makeFlowerEl(
+      14 + Math.random()*18, col,
+      4 + Math.random()*6, Math.random()*-8,
+      Math.random()*90, Math.random()*85
+    ));
+  }
+}
+
+/* ══ PARTICLES ══ */
+function spawnParticles() {
+  const pc = document.getElementById('particles');
+  const cols = ['#E8A0A0','#A890D8','#7BB8E0','#6EC8A8','#E8D060','#E8A070','#C8B070'];
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const s = 3 + Math.random()*7;
+    const dur = 6 + Math.random()*12;
+    const delay = Math.random()*-12;
+    p.style.cssText = `width:${s}px;height:${s}px;background:${cols[Math.floor(Math.random()*cols.length)]};left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${dur}s;animation-delay:${delay}s;opacity:.6`;
+    pc.appendChild(p);
+  }
+}
+
+/* ══ ENVELOPE ANIMATION ══ */
+let animating = false;
+function openEnvelope() {
+  if (animating) return;
+  animating = true;
+  const wrap = document.getElementById('envelopeWrap');
+  const seal = document.getElementById('waxSeal');
+  const flap = document.getElementById('envFlap');
+  const card = document.getElementById('inviteCard');
+  wrap.classList.add('opening');
+
+  seal.classList.add('breaking');
+
+  setTimeout(() => { flap.classList.add('open'); }, 500);
+
+  setTimeout(() => {
+    card.style.opacity = '1';
+    card.style.transform = 'translate(-50%, calc(100% + 40px)) scale(.96)';
+  }, 1200);
+
+  setTimeout(() => {
+    card.style.transform = 'translate(-50%, calc(100% - 30px)) scale(.99)';
+  }, 1900);
+
+  setTimeout(() => { card.classList.add('fullReveal'); }, 2600);
+
+  setTimeout(() => {
+    const layer = document.getElementById('bgBf');
+    for (let i = 0; i < 16; i++) {
+      const c = bfColors[i % bfColors.length];
+      const bf = makeButterflyEl(28 + Math.random()*24, c[0], c[1], 3 + Math.random()*4, 0, Math.random()*90, Math.random()*90);
+      bf.style.opacity = '0';
+      bf.style.transition = 'opacity .8s ease';
+      layer.appendChild(bf);
+      requestAnimationFrame(() => { requestAnimationFrame(() => { bf.style.opacity = '.9'; }); });
     }
-    const pad = n => String(Math.floor(n)).padStart(2, '0');
-    document.getElementById('cd-days').textContent  = pad(diff / 86400000);
-    document.getElementById('cd-hours').textContent = pad((diff % 86400000) / 3600000);
-    document.getElementById('cd-mins').textContent  = pad((diff % 3600000) / 60000);
-    document.getElementById('cd-secs').textContent  = pad((diff % 60000) / 1000);
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+    for (let i = 0; i < 12; i++) {
+      const col = flColors[i % flColors.length];
+      const fl = makeFlowerEl(16 + Math.random()*14, col, 4 + Math.random()*5, 0, Math.random()*90, Math.random()*90);
+      fl.style.opacity = '0';
+      fl.style.transition = 'opacity .8s ease';
+      layer.appendChild(fl);
+      requestAnimationFrame(() => { requestAnimationFrame(() => { fl.style.opacity = '.85'; }); });
+    }
+  }, 2800);
 
-  // ── REVEAL OBSERVER ──
-  const allReveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
-  allReveals.forEach(el => revealObserver.observe(el));
+  setTimeout(() => { showSite(); }, 6200);
+}
 
-  // Shimmer section rules when they enter view
-  const rules = document.querySelectorAll('.section-rule');
-  const ruleObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('shimmer-ready'), 400); ruleObserver.unobserve(e.target); }
-    });
-  }, { threshold: 0.5 });
-  rules.forEach(r => ruleObserver.observe(r));
+/* ══ SHOW SITE ══ */
+function showSite() {
+  const overlay = document.getElementById('inviteOverlay');
+  overlay.classList.add('fading');
+  setTimeout(() => {
+    overlay.style.display = 'none';
+    const main = document.getElementById('mainContent');
+    main.style.display = 'block';
+    main.style.opacity = '0';
+    main.style.transition = 'opacity .8s ease';
+    requestAnimationFrame(() => { requestAnimationFrame(() => { main.style.opacity = '1'; }); });
+    const nav = document.getElementById('mainNav');
+    nav.style.display = 'flex';
+    requestAnimationFrame(() => { requestAnimationFrame(() => { nav.classList.add('slide-in'); }); });
+    triggerReveal();
+    startCountdown();
+  }, 800);
+}
 
-  // Stagger entourage group reveals
-  document.querySelectorAll('.entourage-group').forEach((el, i) => {
-    el.style.transitionDelay = (i * 0.06) + 's';
-  });
+/* ══ SCROLL REVEAL ══ */
+function triggerReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
 
-  // ── LIGHTBOX ──
-  const GALLERY_IMGS = [
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/1.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/2.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/3.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/4.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/5.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/6.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/7.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/8.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/9.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/10.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/11.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/12.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/13.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/14.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/15.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/16.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/17.jpg',
-  ];
-  let lbIdx = 0;
+/* ══ COUNTDOWN ══ */
+function startCountdown() {
+  const target = new Date('2026-12-13T15:00:00+08:00');
+  function update() {
+    const diff = target - new Date();
+    if (diff <= 0) { ['cdMonths','cdDays','cdHours','cdMins'].forEach(id => document.getElementById(id).textContent = '0'); return; }
+    const totalDays = Math.floor(diff / 86400000);
+    document.getElementById('cdMonths').textContent = Math.floor(totalDays / 30.44);
+    document.getElementById('cdDays').textContent = totalDays % Math.round(30.44);
+    document.getElementById('cdHours').textContent = Math.floor((diff % 86400000) / 3600000);
+    document.getElementById('cdMins').textContent = Math.floor((diff % 3600000) / 60000);
+  }
+  update(); setInterval(update, 60000);
+}
 
-  function openLightbox(idx) {
-    lbIdx = idx;
-    const lb = document.getElementById('lightbox');
-    const img = document.getElementById('lb-img');
-    const counter = document.getElementById('lb-counter');
-    img.src = GALLERY_IMGS[lbIdx];
-    counter.textContent = (lbIdx + 1) + ' / ' + GALLERY_IMGS.length;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function closeLightboxOutside(e) {
-    if (e.target === document.getElementById('lightbox')) closeLightbox();
-  }
-  function lbNav(dir) {
-    lbIdx = (lbIdx + dir + GALLERY_IMGS.length) % GALLERY_IMGS.length;
-    const img = document.getElementById('lb-img');
-    img.style.opacity = '0';
-    img.style.transform = 'scale(0.96)';
-    img.style.transition = 'opacity 0.2s, transform 0.2s';
-    setTimeout(() => {
-      img.src = GALLERY_IMGS[lbIdx];
-      img.onload = () => {
-        img.style.opacity = '1';
-        img.style.transform = 'scale(1)';
-      };
-      document.getElementById('lb-counter').textContent = (lbIdx + 1) + ' / ' + GALLERY_IMGS.length;
-    }, 180);
-  }
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
-    const lb = document.getElementById('lightbox');
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'ArrowRight') lbNav(1);
-    if (e.key === 'ArrowLeft') lbNav(-1);
-    if (e.key === 'Escape') closeLightbox();
-  });
+/* ══ NAV ══ */
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
 
-  // ── MOBILE NAV BACKGROUND ──
-  // Set a random bg image on nav for mobile
-  const bgImgs = [
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/2.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/5.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/9.jpg',
-    'https://ik.imagekit.io/jcsquo5nq/cjandlj/13.jpg',
-  ];
-  if (window.innerWidth <= 768) {
-    const pick = bgImgs[Math.floor(Math.random() * bgImgs.length)];
-    document.querySelector('nav').style.backgroundImage = 'linear-gradient(rgba(10,18,8,0.82),rgba(10,18,8,0.82)), url(' + pick + ')';
-    document.querySelector('nav').style.backgroundSize = 'cover';
-    document.querySelector('nav').style.backgroundPosition = 'center';
-  }
+/* ══ INIT ══ */
+window.addEventListener('DOMContentLoaded', function() {
+  spawnParticles();
+  spawnElements(document.getElementById('bgBf'), 10, 8);
+  document.getElementById('envelopeWrap').addEventListener('click', openEnvelope);
+  document.getElementById('skipBtn').addEventListener('click', showSite);
+  setTimeout(function() {
+    spawnElements(document.getElementById('heroBf'), 8, 6);
+    spawnElements(document.getElementById('footerBf'), 6, 5);
+  }, 100);
+});
 </script>
 </body>
 </html>
